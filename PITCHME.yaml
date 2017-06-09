@@ -1,4 +1,5 @@
 {
     "theme": "night",
-    "highlight": "tomorrow-night-bright"
+    "highlight": "tomorrow-night-bright",
+    "transition": "none"
 }
