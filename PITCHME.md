@@ -38,6 +38,108 @@ $employees = [
 
 ```php
 $sum = 0; $count = 0;
+
+
+
+
+
+
+
+
+
+
+
+```
+
+---
+
+```php
+$sum = 0; $count = 0;
+foreach ($employees as $employee) {
+
+
+
+
+
+
+
+
+}
+
+```
+
+---
+
+```php
+$sum = 0; $count = 0;
+foreach ($employees as $employee) {
+    if ($employee['profession'] === 'programmer') {
+
+
+
+
+
+
+    }
+}
+
+```
+
+---
+
+```php
+$sum = 0; $count = 0;
+foreach ($employees as $employee) {
+    if ($employee['profession'] === 'programmer') {
+        foreach ($employee['skills'] as $skill) {
+
+
+
+
+        }
+    }
+}
+
+```
+
+---
+
+```php
+$sum = 0; $count = 0;
+foreach ($employees as $employee) {
+    if ($employee['profession'] === 'programmer') {
+        foreach ($employee['skills'] as $skill) {
+            if ($skill['name'] === 'bash') {
+
+
+            }
+        }
+    }
+}
+
+```
+
+---
+
+```php
+$sum = 0; $count = 0;
+foreach ($employees as $employee) {
+    if ($employee['profession'] === 'programmer') {
+        foreach ($employee['skills'] as $skill) {
+            if ($skill['name'] === 'bash') {
+                $sum += $skill['experience'];
+                $count++;
+            }
+        }
+    }
+}
+
+```
+
+---
+
+```php
+$sum = 0; $count = 0;
 foreach ($employees as $employee) {
     if ($employee['profession'] === 'programmer') {
         foreach ($employee['skills'] as $skill) {
