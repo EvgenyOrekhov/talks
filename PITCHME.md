@@ -32,7 +32,9 @@ $employees = [
 
 Вычислить среднее количество лет опыта работы с bash у программистов
 
----
+---?image=https://vignette3.wikia.nocookie.net/meme/images/f/f3/YChallenge-Accepted-Meme.jpg
+
+---?image=https://vignette3.wikia.nocookie.net/meme/images/f/f3/YChallenge-Accepted-Meme.jpg/revision/latest?cb=20150720165458
 
 ---?image=https://vignette3.wikia.nocookie.net/meme/images/f/f3/YChallenge-Accepted-Meme.jpg/revision/latest?cb=20150720165458&size=contain
 
