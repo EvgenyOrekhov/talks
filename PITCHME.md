@@ -891,10 +891,31 @@ $result = $average(
 @[11]
 @[9-12]
 @[7-13]
-@[5-14]
+@[6-14]
 @[4-15]
 @[2-16]
-@[-]
+
+---
+
+```php
+$result = $average(
+    $map(
+        $prop('experience'),
+        $filter(
+            $propEq('name', 'bash'),
+            $flat(
+                $map(
+                    $prop('skills'),
+                    $filter(
+                        $propEq('profession', 'programmer'),
+                        $employees
+                    )
+                )
+            )
+        )
+    )
+);
+```
 
 ---
 
@@ -942,7 +963,7 @@ $allSkills = $flat($programmersSkills);
 $programmersSkills = $map($prop('skills'), $programmers);
 $allSkills = $flat($programmersSkills);
 
-$allSkills = $flatmap($prop('skills'), $programmers);
+$allSkills = $flatMap($prop('skills'), $programmers);
 ```
 
 ---
@@ -954,6 +975,22 @@ $programmers = $filter(
 );
 $programmersSkills = $map($prop('skills'), $programmers);
 $allSkills = $flat($programmersSkills);
+$bashSkills = $filter($propEq('name', 'bash'), $allSkills);
+$bashExperience = $map($prop('experience'), $bashSkills);
+$result = $average($bashExperience);
+```
+
+@[5-6]
+@[-]
+
+---
+
+```php
+$programmers = $filter(
+    $propEq('profession', 'programmer'),
+    $employees
+);
+$allSkills = $flatMap($prop('skills'), $programmers);
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
 $bashExperience = $map($prop('experience'), $bashSkills);
 $result = $average($bashExperience);
@@ -1018,3 +1055,8 @@ $averageBashExpForProgrammers = $pipe([
     $average,
 ]);
 ```
+
+---
+
+- [Pramda](https://github.com/kapolos/pramda)
+- [Ramda](http://ramdajs.com)
