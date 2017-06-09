@@ -169,6 +169,34 @@ $result = $count ? $sum / $count : 0;
 +++
 
 ```php
+$employees = [
+    [
+        'name' => 'John',
+        'profession' => 'system administrator',
+        'skills' => [
+            ['name' => 'bash', 'experience' => 2],
+        ],
+    ],
+    [
+        'name' => 'Jane',
+        'profession' => 'programmer',
+        'skills' => [
+            ['name' => 'bash', 'experience' => 3],
+            ['name' => 'php', 'experience' => 2],
+            ['experience' => 0],
+        ],
+    ],
+    [
+        'name' => 'Jack',
+        'profession' => 'system administrator',
+        'skills' => [],
+    ],
+];
+```
+
++++
+
+```php
 $sum = 0; $count = 0;
 foreach ($employees as $employee) {
     if ($employee['profession'] === 'programmer') {
