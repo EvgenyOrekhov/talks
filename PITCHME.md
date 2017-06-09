@@ -1155,7 +1155,7 @@ $averageBashExpForProgrammers = $pipe([
 echo $averageBashExpForProgrammers($employees); // 3
 ```
 
----
++++
 
 ```php
 $sum = 0; $count = 0;
