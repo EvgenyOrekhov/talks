@@ -1018,22 +1018,6 @@ $composeMany = function ($fs) use ($compose) {
 +++
 
 ```php
-$compose = function ($f, $g) {
-    return function ($x) use ($f, $g) {
-        return $f($g($x));
-    };
-};
-
-$composeMany = function ($fs) use ($compose) {
-    return array_reduce(
-        $fs,
-        $compose,
-        function ($x) {
-            return $x;
-        }
-    );
-};
-
 $pipe = function ($fs) use ($composeMany) {
     return $composeMany(array_reverse($fs));
 };
