@@ -648,6 +648,8 @@ $inc(2); // 3
 ---?image=img/fowler.jpg&size=contain
 <!-- .slide: data-background-transition="none" -->
 
++++
+
 ```php
 $programmersSkills = array_map(function ($employee) {
     return $employee['skills'];
