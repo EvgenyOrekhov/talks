@@ -218,6 +218,28 @@ $result = $count ? $sum / $count : 0;
 @[5-8]
 @[-]
 
++++?image=img/yo-dawg.png&size=contain
+
+<!-- .slide: data-background-transition="none" -->
+
+```php
+$sum = 0; $count = 0;
+foreach ($employees as $employee) {
+    if ($employee['profession'] === 'programmer') {
+        foreach ($employee['skills'] as $skill) {
+            if (
+                isset($skill['name'])
+                && $skill['name'] === 'bash'
+            ) {
+                $sum += $skill['experience'];
+                $count++;
+            }
+        }
+    }
+}
+$result = $count ? $sum / $count : 0;
+```
+
 ---
 
 # v2.0
