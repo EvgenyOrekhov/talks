@@ -308,6 +308,47 @@ $result = $bashExperience
     : 0;
 ```
 
++++
+
+```php
+$sum = 0; $count = 0;
+foreach ($employees as $employee) {
+    if ($employee['profession'] === 'programmer') {
+        foreach ($employee['skills'] as $skill) {
+            if (
+                isset($skill['name'])
+                && $skill['name'] === 'bash'
+            ) {
+                $sum += $skill['experience'];
+                $count++;
+            }
+        }
+    }
+}
+$result = $count ? $sum / $count : 0;
+```
+
++++
+
+```php
+$programmers = array_filter($employees, function ($employee) {
+    return $employee['profession'] === 'programmer';
+});
+$programmersSkills = array_map(function ($employee) {
+    return $employee['skills'];
+}, $programmers);
+$allSkills = array_merge(...$programmersSkills);
+$bashSkills = array_filter($allSkills, function ($skill) {
+    return isset($skill['name']) && $skill['name'] === 'bash';
+});
+$bashExperience = array_map(function ($bashSkill) {
+    return $bashSkill['experience'];
+}, $bashSkills);
+$result = $bashExperience
+    ? array_sum($bashExperience) / count($bashExperience)
+    : 0;
+```
+
 @[4-6]
 @[11-13]
 @[1-3]
