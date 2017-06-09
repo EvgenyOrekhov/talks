@@ -34,6 +34,8 @@ $employees = [
 
 ---
 
+---?image=https://vignette3.wikia.nocookie.net/meme/images/f/f3/YChallenge-Accepted-Meme.jpg/revision/latest?cb=20150720165458&size=contain
+
 ```php
 $sum = 0; $count = 0;
 foreach ($employees as $employee) {
