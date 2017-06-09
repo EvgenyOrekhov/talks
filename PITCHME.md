@@ -215,7 +215,7 @@ echo $result;
 
 ---
 
-# Currying (каррирование)
+# Currying
 
 ## (каррирование)
 
@@ -540,6 +540,12 @@ $programmersSkills = $prop('skills')($programmer);
 ---
 
 ```php
+$prop = $curry(function ($property, $array) {
+    return $array[$property];
+});
+
+$programmersSkills = $prop('skills', $programmer);
+
 $programmersSkills = $prop('skills')($programmer);
 
 $programmersSkills = array_map(
@@ -550,12 +556,18 @@ $programmersSkills = array_map(
 );
 ```
 
-@[1]
-@[4-6]
+@[7]
+@[10-12]
 
 ---
 
 ```php
+$prop = $curry(function ($property, $array) {
+    return $array[$property];
+});
+
+$programmersSkills = $prop('skills', $programmer);
+
 $programmersSkills = $prop('skills')($programmer);
 
 $programmersSkills = array_map(
@@ -611,6 +623,12 @@ $isProgrammer = $propEq('profession', 'programmer')($employee);
 ---
 
 ```php
+$propEq = $curry(function ($property, $value, $array) {
+    return ($array[$property] ?? null) === $value;
+});
+
+$isProgrammer = $propEq('profession', 'programmer', $employee);
+
 $isProgrammer = $propEq('profession', 'programmer')($employee);
 
 $programmers = array_filter(
@@ -621,12 +639,18 @@ $programmers = array_filter(
 );
 ```
 
-@[1]
-@[5-7]
+@[7]
+@[11-13]
 
 ---
 
 ```php
+$propEq = $curry(function ($property, $value, $array) {
+    return ($array[$property] ?? null) === $value;
+});
+
+$isProgrammer = $propEq('profession', 'programmer', $employee);
+
 $isProgrammer = $propEq('profession', 'programmer')($employee);
 
 $programmers = array_filter(
