@@ -34,16 +34,6 @@ $employees = [
 
 ---
 
-![Challenge Accepted](https://vignette3.wikia.nocookie.net/meme/images/f/f3/YChallenge-Accepted-Meme.jpg/revision/latest?cb=20150720165458)
-
----
-
----?image=http://cdn1.thedataschool.co.uk/wp-content/uploads/2017/04/18225042/df4dbbdfd57a1e99f7c18a9628b4ba82_since-ychallenge-accepted-meme-meme-challenge-accepted_1920-1200.jpeg
-
-<!-- .slide: data-background-transition="none" -->
-
----
-
 ---?image=http://cdn1.thedataschool.co.uk/wp-content/uploads/2017/04/18225042/df4dbbdfd57a1e99f7c18a9628b4ba82_since-ychallenge-accepted-meme-meme-challenge-accepted_1920-1200.jpeg&size=contain
 
 <!-- .slide: data-background-transition="none" -->
