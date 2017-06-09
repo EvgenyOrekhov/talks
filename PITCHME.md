@@ -898,11 +898,11 @@ $flat = function ($arrayOfArrays) {
 <!-- .element: class="fragment" -->
 
 ```php
-$average = $curry(function ($array) {
+$average = function ($array) {
     return $array
         ? array_sum($array) / count($array)
         : 0;
-});
+};
 ```
 
 <!-- .element: class="fragment" -->
