@@ -860,7 +860,7 @@ $result = $bashExperience
 ---?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
 <!-- .slide: data-background-transition="none" -->
 
-<h2 style="padding-bottom: 40%;">_underdash.php</h2>
+<h2 style="padding-bottom: 35%;">_underdash.php</h2>
 
 <br>
 <br>
@@ -868,7 +868,7 @@ $result = $bashExperience
 +++?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
 <!-- .slide: data-background-transition="none" -->
 
-<h2 style="padding-bottom: 40%;">_underdash.php/fp</h2>
+<h2 style="padding-bottom: 35%;">_underdash.php/fp</h2>
 
 <br>
 <br>
