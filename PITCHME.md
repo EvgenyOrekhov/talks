@@ -209,7 +209,9 @@ $result = $bashExperience
 
 ---
 
-## Currying (каррирование)
+# Currying (каррирование)
+
+## (каррирование)
 
 ---
 
@@ -535,8 +537,8 @@ $programmersSkills = $prop('skills')($programmer);
 $programmersSkills = $prop('skills')($programmer);
 
 $programmersSkills = array_map(
-    function ($employee) {
-        return $employee['skills'];
+    function ($programmer) {
+        return $programmer['skills'];
     },
     $programmers
 );
@@ -550,7 +552,10 @@ $programmersSkills = array_map(
 ```php
 $programmersSkills = $prop('skills')($programmer);
 
-$programmersSkills = array_map($prop('skills'), $programmers);
+$programmersSkills = array_map(
+    $prop('skills'),
+    $programmers
+);
 ```
 
 ---
@@ -602,17 +607,26 @@ $isProgrammer = $propEq('profession', 'programmer')($employee);
 ```php
 $isProgrammer = $propEq('profession', 'programmer')($employee);
 
-$programmers = array_filter($employees, function ($employee) {
-    return $employee['profession'] === 'programmer';
-});
+$programmers = array_filter(
+    $employees,
+    function ($employee) {
+        return $employee['profession'] === 'programmer';
+    }
+);
 ```
+
+@[1]
+@[5-7]
 
 ---
 
 ```php
 $isProgrammer = $propEq('profession', 'programmer')($employee);
 
-$programmers = array_filter($employees, $propEq('profession', 'programmer'));
+$programmers = array_filter(
+    $employees,
+    $propEq('profession', 'programmer')
+);
 ```
 
 ---
@@ -639,7 +653,10 @@ $result = $bashExperience
 ---
 
 ```php
-$programmers = array_filter($employees, $propEq('profession', 'programmer'));
+$programmers = array_filter(
+    $employees,
+    $propEq('profession', 'programmer')
+);
 $programmersSkills = array_map($prop('skills'), $programmers);
 $allSkills = array_merge(...$programmersSkills);
 $bashSkills = array_filter($allSkills, $propEq('name', 'bash'));
@@ -686,7 +703,10 @@ $average = $curry(function ($array) {
 ---
 
 ```php
-$programmers = array_filter($employees, $propEq('profession', 'programmer'));
+$programmers = array_filter(
+    $employees,
+    $propEq('profession', 'programmer')
+);
 $programmersSkills = array_map($prop('skills'), $programmers);
 $allSkills = array_merge(...$programmersSkills);
 $bashSkills = array_filter($allSkills, $propEq('name', 'bash'));
@@ -699,7 +719,10 @@ $result = $bashExperience
 ---
 
 ```php
-$programmers = $filter($propEq('profession', 'programmer'), $employees);
+$programmers = $filter(
+    $propEq('profession', 'programmer'),
+    $employees
+);
 $programmersSkills = $map($prop('skills'), $programmers);
 $allSkills = $flat($programmersSkills);
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
@@ -747,15 +770,26 @@ $pipe = function ($fs) {
 };
 ```
 
+@[1]
+@[2-3]
+@[4-8]
+@[9-11]
+
 ---
 
 ```php
 $flatMap = function ($f) use ($pipe, $map, $flat) {
-    return $pipe([
-        $map($f),
-        $flat,
-    ]);
+    return $pipe([$map($f), $flat]);
 };
+```
+
+---
+
+```php
+$programmersSkills = $map($prop('skills'), $programmers);
+$allSkills = $flat($programmersSkills);
+
+
 ```
 
 ---
@@ -770,7 +804,10 @@ $allSkills = $flatmap($prop('skills'), $programmers);
 ---
 
 ```php
-$programmers = $filter($propEq('profession', 'programmer'), $employees);
+$programmers = $filter(
+    $propEq('profession', 'programmer'),
+    $employees
+);
 $programmersSkills = $map($prop('skills'), $programmers);
 $allSkills = $flat($programmersSkills);
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
