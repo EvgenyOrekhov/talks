@@ -961,17 +961,46 @@ $result = $average(
 );
 ```
 
++++?image=http://m.memegen.com/50evvt.jpg&size=contain
+<!-- .slide: data-background-transition="none" -->
+
 ---
 
+# Function Composition
+## (композиция функций)
+
++++?image=img/function-composition-1.png&size=contain
+<!-- .slide: data-background-transition="none" -->
+
++++?image=img/function-composition-2.png&size=contain
+<!-- .slide: data-background-transition="none" -->
+
++++?image=img/function-composition-3.png&size=contain
+<!-- .slide: data-background-transition="none" -->
+
++++
+
 ```php
-$pipe = function ($fs) {
+$compose = function ($f, $g) {
+    return function ($x) use ($f, $g) {
+        return $f($g($x));
+    };
+};
+```
+
++++
+
+```php
+$compose = function ($f, $g) {
+    return function ($x) use ($f, $g) {
+        return $f($g($x));
+    };
+};
+
+$composeMany = function ($fs) use ($compose) {
     return array_reduce(
         $fs,
-        function ($f, $g) {
-            return function ($x) use ($f, $g) {
-                return $g($f($x));
-            };
-        },
+        $compose,
         function ($x) {
             return $x;
         }
@@ -979,10 +1008,36 @@ $pipe = function ($fs) {
 };
 ```
 
-@[1]
-@[2-3]
-@[4-8]
-@[9-11]
+@[7]
+@[8-9]
+@[10]
+@[1-5]
+@[11-13]
+@[-]
+
++++
+
+```php
+$compose = function ($f, $g) {
+    return function ($x) use ($f, $g) {
+        return $f($g($x));
+    };
+};
+
+$composeMany = function ($fs) use ($compose) {
+    return array_reduce(
+        $fs,
+        $compose,
+        function ($x) {
+            return $x;
+        }
+    );
+};
+
+$pipe = function ($fs) use ($composeMany) {
+    return $composeMany(array_reverse($fs));
+};
+```
 
 +++
 
