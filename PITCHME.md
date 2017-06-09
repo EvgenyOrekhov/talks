@@ -981,19 +981,28 @@ $pipe = function ($fs) {
 @[4-8]
 @[9-11]
 
----
++++
 
 ```php
+$programmersSkills = $map($prop('skills'), $programmers);
+$allSkills = $flat($programmersSkills);
+
+
+
+
+
+
+```
+
++++
+
+```php
+$programmersSkills = $map($prop('skills'), $programmers);
+$allSkills = $flat($programmersSkills);
+
 $flatMap = function ($f) use ($pipe, $map, $flat) {
     return $pipe([$map($f), $flat]);
 };
-```
-
-+++
-
-```php
-$programmersSkills = $map($prop('skills'), $programmers);
-$allSkills = $flat($programmersSkills);
 
 
 ```
@@ -1003,9 +1012,16 @@ $allSkills = $flat($programmersSkills);
 ```php
 $programmersSkills = $map($prop('skills'), $programmers);
 $allSkills = $flat($programmersSkills);
+
+$flatMap = function ($f) use ($pipe, $map, $flat) {
+    return $pipe([$map($f), $flat]);
+};
 
 $allSkills = $flatMap($prop('skills'), $programmers);
 ```
+
+@[1-2]
+@[8]
 
 +++
 
@@ -1031,6 +1047,7 @@ $programmers = $filter(
     $propEq('profession', 'programmer'),
     $employees
 );
+
 $allSkills = $flatMap($prop('skills'), $programmers);
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
 $bashExperience = $map($prop('experience'), $bashSkills);
