@@ -218,7 +218,7 @@ $result = $count ? $sum / $count : 0;
 @[5-8]
 @[-]
 
-+++?image=img/yo-dawg.png&size=contain
++++?image=why-so-functional/img/yo-dawg.png&size=contain
 
 <!-- .slide: data-background-transition="none" -->
 
@@ -696,7 +696,7 @@ $inc = $add(1);
 $inc(2); // 3
 ```
 
----?image=img/fowler.jpg&size=contain
+---?image=why-so-functional/img/fowler.jpg&size=contain
 
 <!-- .slide: data-background-transition="none" -->
 
@@ -1067,15 +1067,15 @@ $result = $average(
 
 ## (композиция функций)
 
-+++?image=img/function-composition-1.jpg&size=contain
++++?image=why-so-functional/img/function-composition-1.jpg&size=contain
 
 <!-- .slide: data-background-transition="none" -->
 
-+++?image=img/function-composition-2.jpg&size=contain
++++?image=why-so-functional/img/function-composition-2.jpg&size=contain
 
 <!-- .slide: data-background-transition="none" -->
 
-+++?image=img/function-composition-3.jpg&size=contain
++++?image=why-so-functional/img/function-composition-3.jpg&size=contain
 
 <!-- .slide: data-background-transition="none" -->
 
