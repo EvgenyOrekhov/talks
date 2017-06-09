@@ -857,7 +857,17 @@ $result = $bashExperience
     : 0;
 ```
 
----
+---?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
+<!-- .slide: data-background-transition="none" -->
+
+# _underdash.php
+
++++?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
+<!-- .slide: data-background-transition="none" -->
+
+# _underdash.php/fp
+
++++
 
 ```php
 $filter = $curry(function ($f, $array) {
