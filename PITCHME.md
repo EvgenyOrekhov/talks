@@ -47,6 +47,8 @@ foreach ($employees as $employee) {
     }
 }
 $result = $count ? $sum / $count : 0;
+
+echo $result;
 ```
 
 ---
@@ -71,6 +73,8 @@ foreach ($employees as $employee) {
     }
 }
 $result = $count ? $sum / $count : 0;
+
+echo $result;
 ```
 
 @[5-8]
@@ -200,6 +204,8 @@ $bashExperience = array_map(function ($bashSkill) {
 $result = $bashExperience
     ? array_sum($bashExperience) / count($bashExperience)
     : 0;
+
+echo $result;
 ```
 
 @[4-6]
@@ -648,6 +654,8 @@ $bashExperience = array_map(function ($bashSkill) {
 $result = $bashExperience
     ? array_sum($bashExperience) / count($bashExperience)
     : 0;
+
+echo $result;
 ```
 
 ---
@@ -664,6 +672,8 @@ $bashExperience = array_map($prop('experience'), $bashSkills);
 $result = $bashExperience
     ? array_sum($bashExperience) / count($bashExperience)
     : 0;
+
+echo $result;
 ```
 
 ---
@@ -714,6 +724,8 @@ $bashExperience = array_map($prop('experience'), $bashSkills);
 $result = $bashExperience
     ? array_sum($bashExperience) / count($bashExperience)
     : 0;
+
+echo $result;
 ```
 
 ---
@@ -728,6 +740,8 @@ $allSkills = $flat($programmersSkills);
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
 $bashExperience = $map($prop('experience'), $bashSkills);
 $result = $average($bashExperience);
+
+echo $result;
 ```
 
 ---
@@ -750,6 +764,8 @@ $result = $average(
         )
     )
 );
+
+echo $result;
 ```
 
 ---
@@ -813,6 +829,8 @@ $allSkills = $flat($programmersSkills);
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
 $bashExperience = $map($prop('experience'), $bashSkills);
 $result = $average($bashExperience);
+
+echo $result;
 ```
 
 ---
@@ -861,6 +879,8 @@ foreach ($employees as $employee) {
     }
 }
 $result = $count ? $sum / $count : 0;
+
+echo $result;
 ```
 
 ---
