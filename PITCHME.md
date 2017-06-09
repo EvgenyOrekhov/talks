@@ -1058,5 +1058,5 @@ $averageBashExpForProgrammers = $pipe([
 
 ---
 
-- [Pramda](https://github.com/kapolos/pramda)
-- [Ramda](http://ramdajs.com)
+# [Pramda](https://github.com/kapolos/pramda) (PHP)
+# [Ramda](http://ramdajs.com) (JS)
