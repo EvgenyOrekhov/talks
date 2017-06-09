@@ -38,6 +38,10 @@ $employees = [
 
 ---
 
+# v1.0
+
++++
+
 ```php
 $sum = 0; $count = 0;
 
@@ -186,6 +190,10 @@ $result = $count ? $sum / $count : 0;
 @[-]
 
 ---
+
+# v2.0
+
++++
 
 ```php
 $programmers = array_filter($employees, function ($employee) {
@@ -637,7 +645,8 @@ $inc = $add(1);
 $inc(2); // 3
 ```
 
----
+---?image=img/fowler.jpg&size=contain
+<!-- .slide: data-background-transition="none" -->
 
 ```php
 $programmersSkills = array_map(function ($employee) {
@@ -969,13 +978,13 @@ $result = $average(
 # Function Composition
 ## (композиция функций)
 
-+++?image=img/function-composition-1.png&size=contain
++++?image=img/function-composition-1.jpg&size=contain
 <!-- .slide: data-background-transition="none" -->
 
-+++?image=img/function-composition-2.png&size=contain
++++?image=img/function-composition-2.jpg&size=contain
 <!-- .slide: data-background-transition="none" -->
 
-+++?image=img/function-composition-3.png&size=contain
++++?image=img/function-composition-3.jpg&size=contain
 <!-- .slide: data-background-transition="none" -->
 
 +++
@@ -1097,6 +1106,10 @@ $result = $average($bashExperience);
 ```
 
 ---
+
+# v9000.0
+
++++
 
 ```php
 $averageBashExpForProgrammers = $pipe([
