@@ -164,6 +164,7 @@ $result = $count ? $sum / $count : 0;
 > **Notice**: Undefined index: name
 
 +++?image=http://memedad.com/memes/172636.gif&size=contain
+
 <!-- .slide: data-background-transition="none" -->
 
 +++
@@ -674,6 +675,7 @@ $inc(2); // 3
 ```
 
 ---?image=img/fowler.jpg&size=contain
+
 <!-- .slide: data-background-transition="none" -->
 
 +++
@@ -891,6 +893,7 @@ $result = $bashExperience
 ```
 
 ---?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
+
 <!-- .slide: data-background-transition="none" -->
 
 <h2 style="padding-bottom: 35%; color: #fff;">_underdash.php</h2>
@@ -899,6 +902,7 @@ $result = $bashExperience
 <br>
 
 +++?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
+
 <!-- .slide: data-background-transition="none" -->
 
 <h2 style="padding-bottom: 35%; color: #fff;">_underdash.php/fp</h2>
@@ -1032,6 +1036,7 @@ $result = $average(
 ```
 
 +++?image=https://allisonmaruska.files.wordpress.com/2015/10/we-need-to-go-deeper.jpg&size=contain
+
 <!-- .slide: data-background-transition="none" -->
 
 ---
@@ -1041,12 +1046,15 @@ $result = $average(
 ## (композиция функций)
 
 +++?image=img/function-composition-1.jpg&size=contain
+
 <!-- .slide: data-background-transition="none" -->
 
 +++?image=img/function-composition-2.jpg&size=contain
+
 <!-- .slide: data-background-transition="none" -->
 
 +++?image=img/function-composition-3.jpg&size=contain
+
 <!-- .slide: data-background-transition="none" -->
 
 +++
