@@ -1031,7 +1031,7 @@ $result = $average(
 );
 ```
 
-+++?image=http://m.memegen.com/50evvt.jpg&size=contain
++++?image=https://allisonmaruska.files.wordpress.com/2015/10/we-need-to-go-deeper.jpg&size=contain
 <!-- .slide: data-background-transition="none" -->
 
 ---
