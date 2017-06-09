@@ -159,7 +159,7 @@ $result = $count ? $sum / $count : 0;
 
 > **Notice**: Undefined index: name
 
----?image=http://i2.kym-cdn.com/entries/icons/facebook/000/000/554/facepalm.jpg&size=contain
++++?image=http://i2.kym-cdn.com/entries/icons/facebook/000/000/554/facepalm.jpg&size=contain
 
 +++
 
