@@ -658,6 +658,7 @@ $programmersSkills = array_map(
 
 @[7]
 @[10-12]
+@[-]
 
 ---
 
@@ -671,7 +672,9 @@ $programmersSkills = $prop('skills', $programmer);
 $programmersSkills = $prop('skills')($programmer);
 
 $programmersSkills = array_map(
+
     $prop('skills'),
+
     $programmers
 );
 ```
@@ -741,6 +744,7 @@ $programmers = array_filter(
 
 @[7]
 @[11-13]
+@[-]
 
 ---
 
@@ -755,7 +759,9 @@ $isProgrammer = $propEq('profession', 'programmer')($employee);
 
 $programmers = array_filter(
     $employees,
+
     $propEq('profession', 'programmer')
+
 );
 ```
 
