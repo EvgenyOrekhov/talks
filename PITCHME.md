@@ -876,10 +876,15 @@ $programmers = array_filter(
     $employees,
     $propEq('profession', 'programmer')
 );
+
 $programmersSkills = array_map($prop('skills'), $programmers);
+
 $allSkills = array_merge(...$programmersSkills);
+
 $bashSkills = array_filter($allSkills, $propEq('name', 'bash'));
+
 $bashExperience = array_map($prop('experience'), $bashSkills);
+
 $result = $bashExperience
     ? array_sum($bashExperience) / count($bashExperience)
     : 0;
@@ -942,10 +947,15 @@ $programmers = array_filter(
     $employees,
     $propEq('profession', 'programmer')
 );
+
 $programmersSkills = array_map($prop('skills'), $programmers);
+
 $allSkills = array_merge(...$programmersSkills);
+
 $bashSkills = array_filter($allSkills, $propEq('name', 'bash'));
+
 $bashExperience = array_map($prop('experience'), $bashSkills);
+
 $result = $bashExperience
     ? array_sum($bashExperience) / count($bashExperience)
     : 0;
@@ -958,10 +968,15 @@ $programmers = $filter(
     $propEq('profession', 'programmer'),
     $employees
 );
+
 $programmersSkills = $map($prop('skills'), $programmers);
+
 $allSkills = $flat($programmersSkills);
+
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
+
 $bashExperience = $map($prop('experience'), $bashSkills);
+
 $result = $average($bashExperience);
 ```
 
@@ -1128,14 +1143,19 @@ $programmers = $filter(
     $propEq('profession', 'programmer'),
     $employees
 );
+
 $programmersSkills = $map($prop('skills'), $programmers);
+
 $allSkills = $flat($programmersSkills);
+
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
+
 $bashExperience = $map($prop('experience'), $bashSkills);
+
 $result = $average($bashExperience);
 ```
 
-@[5-6]
+@[6-8]
 @[-]
 
 +++
@@ -1146,9 +1166,14 @@ $programmers = $filter(
     $employees
 );
 
+
+
 $allSkills = $flatMap($prop('skills'), $programmers);
+
 $bashSkills = $filter($propEq('name', 'bash'), $allSkills);
+
 $bashExperience = $map($prop('experience'), $bashSkills);
+
 $result = $average($bashExperience);
 ```
 
