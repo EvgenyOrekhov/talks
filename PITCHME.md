@@ -762,7 +762,7 @@ $result = $average(
         $prop('experience'),
         $filter(
             $propEq('name', 'bash'),
-            $merge(
+            $flat(
                 $map(
                     $prop('skills'),
                     $filter(
@@ -864,7 +864,7 @@ $averageBashExpForProgrammers = $pipe([
     $average,
 ]);
 
-echo $averageBashExpForProgrammers($employees);
+echo $averageBashExpForProgrammers($employees); // 3
 ```
 
 ---
@@ -885,8 +885,6 @@ foreach ($employees as $employee) {
     }
 }
 $result = $count ? $sum / $count : 0;
-
-echo $result;
 ```
 
 ---
@@ -899,6 +897,4 @@ $averageBashExpForProgrammers = $pipe([
     $map($prop('experience')),
     $average,
 ]);
-
-echo $averageBashExpForProgrammers($employees);
 ```
