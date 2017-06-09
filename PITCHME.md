@@ -53,7 +53,7 @@ $sum = 0; $count = 0;
 
 ```
 
----
++++
 
 ```php
 $sum = 0; $count = 0;
@@ -70,7 +70,7 @@ foreach ($employees as $employee) {
 
 ```
 
----
++++
 
 ```php
 $sum = 0; $count = 0;
@@ -87,7 +87,7 @@ foreach ($employees as $employee) {
 
 ```
 
----
++++
 
 ```php
 $sum = 0; $count = 0;
@@ -104,7 +104,7 @@ foreach ($employees as $employee) {
 
 ```
 
----
++++
 
 ```php
 $sum = 0; $count = 0;
@@ -121,7 +121,7 @@ foreach ($employees as $employee) {
 
 ```
 
----
++++
 
 ```php
 $sum = 0; $count = 0;
@@ -138,7 +138,7 @@ foreach ($employees as $employee) {
 
 ```
 
----
++++
 
 ```php
 $sum = 0; $count = 0;
@@ -155,11 +155,11 @@ foreach ($employees as $employee) {
 $result = $count ? $sum / $count : 0;
 ```
 
----
++++
 
 > **Notice**: Undefined index: name
 
----
++++
 
 ```php
 $sum = 0; $count = 0;
@@ -203,7 +203,7 @@ $programmers = array_filter($employees, function ($employee) {
 
 ```
 
----
++++
 
 ```php
 $programmers = array_filter($employees, function ($employee) {
@@ -224,7 +224,7 @@ $programmersSkills = array_map(function ($employee) {
 
 ```
 
----
++++
 
 ```php
 $programmers = array_filter($employees, function ($employee) {
@@ -245,7 +245,7 @@ $allSkills = array_merge(...$programmersSkills);
 
 ```
 
----
++++
 
 ```php
 $programmers = array_filter($employees, function ($employee) {
@@ -266,7 +266,7 @@ $bashSkills = array_filter($allSkills, function ($skill) {
 
 ```
 
----
++++
 
 ```php
 $programmers = array_filter($employees, function ($employee) {
@@ -287,7 +287,7 @@ $bashExperience = array_map(function ($bashSkill) {
 
 ```
 
----
++++
 
 ```php
 $programmers = array_filter($employees, function ($employee) {
@@ -319,7 +319,7 @@ $result = $bashExperience
 
 ## (каррирование)
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -339,7 +339,7 @@ $add = function ($a) {
 
 ```
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -359,7 +359,7 @@ $inc = $add(1);
 
 ```
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -379,7 +379,7 @@ $inc(1); // 2
 
 ```
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -399,7 +399,7 @@ $inc(4); // 5
 
 ```
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -419,7 +419,7 @@ $dec = $add(-1);
 
 ```
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -439,7 +439,7 @@ $dec(1); // 0
 
 ```
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -459,7 +459,7 @@ $dec(1); // 0
 $dec(4); // 3
 ```
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -471,7 +471,7 @@ $add = function ($a) {
 $add(1)(2); // 3
 ```
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -483,7 +483,7 @@ $add = function ($a) {
 $add(1)(2); // (‿ꜟ‿)
 ```
 
----
++++
 
 ```php
 $curry = function ($f) {
@@ -512,7 +512,7 @@ $curry = function ($f) {
 @[17]
 @[10-14]
 
----
++++
 
 ```php
 $add = function ($a) {
@@ -522,7 +522,7 @@ $add = function ($a) {
 };
 ```
 
----
++++
 
 ```php
 $add = $curry(function ($a, $b) {
@@ -530,7 +530,7 @@ $add = $curry(function ($a, $b) {
 });
 ```
 
----
++++
 
 ```php
 $add = $curry(function ($a, $b) {
@@ -540,7 +540,7 @@ $add = $curry(function ($a, $b) {
 $add(1, 2); // 3
 ```
 
----
++++
 
 ```php
 $add = $curry(function ($a, $b) {
@@ -551,7 +551,7 @@ $add(1, 2); // 3
 $add(1)(2); // 3
 ```
 
----
++++
 
 ```php
 $add = $curry(function ($a, $b) {
@@ -563,7 +563,7 @@ $add(1)(2); // 3
 $add(1)()()(2); // 3
 ```
 
----
++++
 
 ```php
 $add = $curry(function ($a, $b) {
@@ -578,7 +578,7 @@ $inc = $add(1);
 
 ```
 
----
++++
 
 ```php
 $add = $curry(function ($a, $b) {
@@ -607,7 +607,7 @@ $bashExperience = array_map(function ($bashSkill) {
 }, $bashSkills);
 ```
 
----
++++
 
 ```php
 $prop = $curry(function ($property, $array) {
@@ -615,7 +615,7 @@ $prop = $curry(function ($property, $array) {
 });
 ```
 
----
++++
 
 ```php
 $prop = $curry(function ($property, $array) {
@@ -625,7 +625,7 @@ $prop = $curry(function ($property, $array) {
 $programmersSkills = $prop('skills', $programmer);
 ```
 
----
++++
 
 ```php
 $prop = $curry(function ($property, $array) {
@@ -637,7 +637,7 @@ $programmersSkills = $prop('skills', $programmer);
 $programmersSkills = $prop('skills')($programmer);
 ```
 
----
++++
 
 ```php
 $prop = $curry(function ($property, $array) {
@@ -660,7 +660,7 @@ $programmersSkills = array_map(
 @[10-12]
 @[-]
 
----
++++
 
 ```php
 $prop = $curry(function ($property, $array) {
@@ -693,7 +693,7 @@ $bashSkills = array_filter($allSkills, function ($skill) {
 });
 ```
 
----
++++
 
 ```php
 $propEq = $curry(function ($property, $value, $array) {
@@ -701,7 +701,7 @@ $propEq = $curry(function ($property, $value, $array) {
 });
 ```
 
----
++++
 
 ```php
 $propEq = $curry(function ($property, $value, $array) {
@@ -711,7 +711,7 @@ $propEq = $curry(function ($property, $value, $array) {
 $isProgrammer = $propEq('profession', 'programmer', $employee);
 ```
 
----
++++
 
 ```php
 $propEq = $curry(function ($property, $value, $array) {
@@ -723,7 +723,7 @@ $isProgrammer = $propEq('profession', 'programmer', $employee);
 $isProgrammer = $propEq('profession', 'programmer')($employee);
 ```
 
----
++++
 
 ```php
 $propEq = $curry(function ($property, $value, $array) {
@@ -746,7 +746,7 @@ $programmers = array_filter(
 @[11-13]
 @[-]
 
----
++++
 
 ```php
 $propEq = $curry(function ($property, $value, $array) {
@@ -786,7 +786,7 @@ $result = $bashExperience
     : 0;
 ```
 
----
++++
 
 ```php
 $programmers = array_filter(
@@ -836,7 +836,7 @@ $average = $curry(function ($array) {
 
 <!-- .element: class="fragment" -->
 
----
++++
 
 ```php
 $programmers = array_filter(
@@ -852,7 +852,7 @@ $result = $bashExperience
     : 0;
 ```
 
----
++++
 
 ```php
 $programmers = $filter(
@@ -866,7 +866,7 @@ $bashExperience = $map($prop('experience'), $bashSkills);
 $result = $average($bashExperience);
 ```
 
----
++++
 
 ```php
 $result = $average(
@@ -895,7 +895,7 @@ $result = $average(
 @[4-15]
 @[2-16]
 
----
++++
 
 ```php
 $result = $average(
@@ -948,7 +948,7 @@ $flatMap = function ($f) use ($pipe, $map, $flat) {
 };
 ```
 
----
++++
 
 ```php
 $programmersSkills = $map($prop('skills'), $programmers);
@@ -957,7 +957,7 @@ $allSkills = $flat($programmersSkills);
 
 ```
 
----
++++
 
 ```php
 $programmersSkills = $map($prop('skills'), $programmers);
@@ -966,7 +966,7 @@ $allSkills = $flat($programmersSkills);
 $allSkills = $flatMap($prop('skills'), $programmers);
 ```
 
----
++++
 
 ```php
 $programmers = $filter(
@@ -983,7 +983,7 @@ $result = $average($bashExperience);
 @[5-6]
 @[-]
 
----
++++
 
 ```php
 $programmers = $filter(
@@ -1010,7 +1010,7 @@ $averageBashExpForProgrammers = $pipe([
 
 ```
 
----
++++
 
 ```php
 $averageBashExpForProgrammers = $pipe([
@@ -1044,7 +1044,7 @@ foreach ($employees as $employee) {
 $result = $count ? $sum / $count : 0;
 ```
 
----
++++
 
 ```php
 $averageBashExpForProgrammers = $pipe([
