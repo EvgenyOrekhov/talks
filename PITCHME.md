@@ -1022,6 +1022,7 @@ $result = $average(
 ---
 
 # Function Composition
+
 ## (композиция функций)
 
 +++?image=img/function-composition-1.jpg&size=contain
@@ -1218,4 +1219,5 @@ $averageBashExpForProgrammers = $pipe([
 ---
 
 ## [Pramda](https://github.com/kapolos/pramda) (PHP)
+
 ## [Ramda](http://ramdajs.com) (JS)
