@@ -24,7 +24,7 @@ $employees = [
     ],
 ];
 
-$curry = function ($f) {
+$curry = function (callable $f): callable {
     $length = (new ReflectionFunction($f))->getNumberOfParameters();
 
     $partial = function (...$args) use ($f, $length, &$partial) {
@@ -54,8 +54,8 @@ $map = $curry(function ($f, $array) {
     return array_map($f, $array);
 });
 
-$flat = function ($arrayOfArrays) {
-    return array_merge(...$arrayOfArrays);
+$flat = function (array $arrays) {
+    return array_merge(...$arrays);
 };
 
 $average = function ($array) {
@@ -64,13 +64,13 @@ $average = function ($array) {
         : 0;
 };
 
-$compose = function ($f, $g) {
+$compose = function (callable $f, callable $g): callable {
     return function ($x) use ($f, $g) {
         return $f($g($x));
     };
 };
 
-$composeMany = function ($fs) use ($compose) {
+$composeMany = function (array $fs) use ($compose): callable {
     return array_reduce(
         $fs,
         $compose,

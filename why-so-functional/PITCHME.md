@@ -589,7 +589,7 @@ $add(1)(2); // (‿ꜟ‿)
 +++
 
 ```php
-$curry = function ($f) {
+$curry = function (callable $f): callable {
     $length = (new ReflectionFunction($f))
         ->getNumberOfParameters();
 
@@ -949,8 +949,8 @@ $map = $curry(function ($f, $array) {
 <!-- .element: class="fragment" -->
 
 ```php
-$flat = function ($arrayOfArrays) {
-    return array_merge(...$arrayOfArrays);
+$flat = function (array $arrays) {
+    return array_merge(...$arrays);
 };
 ```
 
@@ -1082,7 +1082,7 @@ $result = $average(
 +++
 
 ```php
-$compose = function ($f, $g) {
+$compose = function (callable $f, callable $g): callable {
     return function ($x) use ($f, $g) {
         return $f($g($x));
     };
@@ -1092,13 +1092,13 @@ $compose = function ($f, $g) {
 +++
 
 ```php
-$compose = function ($f, $g) {
+$compose = function (callable $f, callable $g): callable {
     return function ($x) use ($f, $g) {
         return $f($g($x));
     };
 };
 
-$composeMany = function ($fs) use ($compose) {
+$composeMany = function (array $fs) use ($compose): callable {
     return array_reduce(
         $fs,
         $compose,
