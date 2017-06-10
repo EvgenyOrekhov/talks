@@ -1126,6 +1126,10 @@ $pipe = $compose($composeMany, 'array_reverse');
 
 <!-- .slide: data-background-transition="none" -->
 
+```php
+$pipe = $compose($composeMany, 'array_reverse');
+```
+
 +++
 
 ```php
