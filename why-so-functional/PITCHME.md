@@ -1119,10 +1119,12 @@ $composeMany = function ($fs) use ($compose) {
 +++
 
 ```php
-$pipe = function ($fs) use ($composeMany) {
-    return $composeMany(array_reverse($fs));
-};
+$pipe = $compose($composeMany, 'array_reverse');
 ```
+
++++?image=why-so-functional/img/yo-dawg.png&size=contain
+
+<!-- .slide: data-background-transition="none" -->
 
 +++
 
