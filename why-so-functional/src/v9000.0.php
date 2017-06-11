@@ -64,9 +64,9 @@ $average = function ($array) {
         : 0;
 };
 
-$compose = function (callable $f, callable $g): callable {
-    return function ($x) use ($f, $g) {
-        return $f($g($x));
+$compose = function (callable $g, callable $f): callable {
+    return function ($x) use ($g, $f) {
+        return $g($f($x));
     };
 };
 
