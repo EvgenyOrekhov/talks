@@ -1134,6 +1134,14 @@ $composeMany = function (array $fs) use ($compose): callable {
 +++
 
 ```php
+$pipe = function (array $fs) use ($composeMany) {
+    return $composeMany(array_reverse($fs));
+};
+```
+
++++
+
+```php
 $pipe = $compose($composeMany, 'array_reverse');
 ```
 
