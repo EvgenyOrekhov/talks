@@ -424,6 +424,13 @@ $result = $bashExperience
 
 ## (каррирование)
 
+---
+
+## Каррированная функция
+
+функция, которая будет возвращать новую функцию, пока не примет все свои
+аргументы
+
 +++
 
 ```php
@@ -1065,9 +1072,11 @@ $result = $average(
 
 ---
 
-# Function Composition
+## Function Composition
 
 ## (композиция функций)
+
+применение одной функции к результату другой
 
 +++?image=why-so-functional/img/function-composition-1.jpg&size=contain
 
