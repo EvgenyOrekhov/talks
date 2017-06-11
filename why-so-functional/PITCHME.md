@@ -2,9 +2,9 @@
 
 ---
 
-## Imperative -> Functional
+### Imperative -> Functional
 
-## in PHP!
+### in PHP!
 
 <!-- .element: class="fragment" -->
 
