@@ -1287,4 +1287,11 @@ $averageBashExpForProgrammers = $pipe([
 
 ---
 
-### ![GitHub mark](http://johnny-five.io/img/github-icon.png) [EvgenyOrekhov/talks](https://github.com/EvgenyOrekhov/talks)
+<h3>
+    <img
+        style="vertical-align: middle; background: none; border: none;"
+        src="http://johnny-five.io/img/github-icon.png"
+        alt="GitHub mark"
+    >
+    <a href="https://github.com/EvgenyOrekhov/talks">EvgenyOrekhov/talks</a>
+</h3>
