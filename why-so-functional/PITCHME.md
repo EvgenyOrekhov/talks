@@ -2,6 +2,14 @@
 
 ---
 
+## Imperative -> Functional
+
+## in PHP!
+
+<!-- .element: class="fragment" -->
+
+---
+
 ```php
 $employees = [
     [
@@ -1298,6 +1306,32 @@ $averageBashExpForProgrammers = $pipe([
     $map($prop('experience')),
     $average,
 ]);
+```
+
+---
+
+## Преимущества
+
+- сниженная до миниума цикломатическая сложность
+- декларативность
+- переиспользуемость
+- краткость
+- создание новых функций путём вызова уже существующих
+- разделение данных и вычислений
+- подкреплено математическими теориями
+
+---?image=http://real-software-components.com/API_RIA/technologies/images/OOP_ac_il.png&size=contain
+
++++
+
+```php
+$app = $pipe([
+    $controller,
+    $model,
+    $view,
+]);
+
+echo $app($_REQUEST);
 ```
 
 ---
