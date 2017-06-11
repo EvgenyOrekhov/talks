@@ -1092,6 +1092,10 @@ $result = $average(
 
 +++
 
+## (g ∘ f)(x) = g(f(x))
+
++++
+
 ```php
 $compose = function (callable $f, callable $g): callable {
     return function ($x) use ($f, $g) {
