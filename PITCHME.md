@@ -11,4 +11,4 @@ test
 +++
 
 this slide breaks the `data-background-transition=none`
-comment fragment on the next slide
+comment fragment on the previous slide
