@@ -746,7 +746,7 @@ $prop = $curry(function ($property, $array) {
     return $array[$property];
 });
 
-$programmersSkills = $prop('skills', $programmer);
+$programmerSkills = $prop('skills', $programmer);
 ```
 
 +++
@@ -756,9 +756,9 @@ $prop = $curry(function ($property, $array) {
     return $array[$property];
 });
 
-$programmersSkills = $prop('skills', $programmer);
+$programmerSkills = $prop('skills', $programmer);
 
-$programmersSkills = $prop('skills')($programmer);
+$programmerSkills = $prop('skills')($programmer);
 ```
 
 +++
@@ -768,9 +768,9 @@ $prop = $curry(function ($property, $array) {
     return $array[$property];
 });
 
-$programmersSkills = $prop('skills', $programmer);
+$programmerSkills = $prop('skills', $programmer);
 
-$programmersSkills = $prop('skills')($programmer);
+$programmerSkills = $prop('skills')($programmer);
 
 $programmersSkills = array_map(
     function ($programmer) {
@@ -791,9 +791,9 @@ $prop = $curry(function ($property, $array) {
     return $array[$property];
 });
 
-$programmersSkills = $prop('skills', $programmer);
+$programmerSkills = $prop('skills', $programmer);
 
-$programmersSkills = $prop('skills')($programmer);
+$programmerSkills = $prop('skills')($programmer);
 
 $programmersSkills = array_map(
 
