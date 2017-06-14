@@ -42,8 +42,6 @@ $employees = [
 
 ---?image=http://cdn1.thedataschool.co.uk/wp-content/uploads/2017/04/18225042/df4dbbdfd57a1e99f7c18a9628b4ba82_since-ychallenge-accepted-meme-meme-challenge-accepted_1920-1200.jpeg&size=contain
 
-<!-- .slide: data-background-transition="none" -->
-
 ---
 
 # v1.0
@@ -173,8 +171,6 @@ $result = $count ? $sum / $count : 0;
 
 +++?image=http://memedad.com/memes/172636.gif&size=contain
 
-<!-- .slide: data-background-transition="none" -->
-
 > **Notice**: Undefined index: name
 
 +++
@@ -229,8 +225,6 @@ $result = $count ? $sum / $count : 0;
 @[-]
 
 +++?image=why-so-functional/img/yo-dawg.png&size=contain
-
-<!-- .slide: data-background-transition="none" -->
 
 ```php
 $sum = 0; $count = 0;
@@ -715,8 +709,6 @@ $inc(2); // 3
 
 ---?image=why-so-functional/img/fowler.jpg&size=contain
 
-<!-- .slide: data-background-transition="none" -->
-
 +++
 
 ```php
@@ -933,16 +925,12 @@ $result = $bashExperience
 
 ---?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
 
-<!-- .slide: data-background-transition="none" -->
-
 <h2 style="padding-bottom: 35%; color: #fff;">_underdash.php</h2>
 
 <br>
 <br>
 
 +++?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
-
-<!-- .slide: data-background-transition="none" -->
 
 <h2 style="padding-bottom: 35%; color: #fff;">_underdash.php/fp</h2>
 
@@ -1076,8 +1064,6 @@ $result = $average(
 
 +++?image=https://allisonmaruska.files.wordpress.com/2015/10/we-need-to-go-deeper.jpg&size=contain
 
-<!-- .slide: data-background-transition="none" -->
-
 ---
 
 ## Function Composition
@@ -1088,15 +1074,9 @@ $result = $average(
 
 +++?image=why-so-functional/img/function-composition-1.jpg&size=contain
 
-<!-- .slide: data-background-transition="none" -->
-
 +++?image=why-so-functional/img/function-composition-2.jpg&size=contain
 
-<!-- .slide: data-background-transition="none" -->
-
 +++?image=why-so-functional/img/function-composition-3.jpg&size=contain
-
-<!-- .slide: data-background-transition="none" -->
 
 +++
 
@@ -1154,8 +1134,6 @@ $pipe = $compose($composeMany, 'array_reverse');
 ```
 
 +++?image=why-so-functional/img/yo-dawg.png&size=contain
-
-<!-- .slide: data-background-transition="none" -->
 
 ```php
 $pipe = $compose($composeMany, 'array_reverse');
