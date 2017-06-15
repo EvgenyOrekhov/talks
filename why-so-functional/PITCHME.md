@@ -1318,6 +1318,10 @@ echo $app($_REQUEST);
 
 ## [Ramda](http://ramdajs.com) (JS)
 
+<br>
+
+### [Жаргон функционального программирования](https://habrahabr.ru/post/310172/)
+
 ---
 
 <h3>
