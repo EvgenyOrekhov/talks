@@ -126,11 +126,15 @@ greeting = "HELLO, WORLD!"
 
 ---
 
+<span style="text-align: left;">
+
 with void yield async await class extends super static delete in finally
 
 continue for while do else var let switch case break default instanceof this
 
 throw new try catch typeof if import export const return function
+
+</span>
 
 ## 36
 
@@ -767,20 +771,28 @@ if (typeof kalina.jump === "function") { // false
 
 ---
 
+<span style="text-align: left;">
+
 ~~with void yield async await class extends super static delete in finally~~
 
 ~~continue for while do else var let switch case break default instanceof this~~
 
 ~~throw new try catch~~ typeof if import export const return function
 
+</span>
+
 ## 7 / 36
 
 +++
+
+<span style="text-align: left;">
 
 ~~with void yield async await class extends super static delete in finally~~
 
 ~~continue for while do else var let switch case break default instanceof this~~
 
 throw new try catch typeof if import export const return function
+
+</span>
 
 ## 11 / 36
