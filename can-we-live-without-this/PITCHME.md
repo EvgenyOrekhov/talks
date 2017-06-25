@@ -115,8 +115,10 @@ Alonzo Church
 ```haskell
 greeting = "Hello, World!"
 
-greeting = "HELLO, WORLD!" -- Error: Multiple declarations of ‘greeting’
+greeting = "HELLO, WORLD!"
 ```
+
+@[-](Error: Multiple declarations of ‘greeting’)
 
 +++
 
