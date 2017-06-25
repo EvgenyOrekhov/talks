@@ -230,6 +230,8 @@ generate(); // 3
 generate(); // undefined
 ```
 
+<!-- .element: class="fragment" -->
+
 +++
 
 # ~~yield~~
