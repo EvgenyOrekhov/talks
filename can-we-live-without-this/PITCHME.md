@@ -99,7 +99,8 @@ class Main
 
 +++
 
-## ~~*, function pointers, virtual tables~~
+# ~~function* &pointers~~
+# ~~**virtual * tables~~
 
 ---
 
