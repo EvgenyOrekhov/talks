@@ -783,7 +783,7 @@ Shape.prototype.move = function (x, y) {
 
 ```js
 function Rectangle() {
-  Shape.call(this); // call super constructor
+  Shape.call(this);
 }
 
 Rectangle.prototype = Object.create(Shape.prototype);
