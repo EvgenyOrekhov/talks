@@ -992,9 +992,7 @@ object.publicMethod();
     throw new try catch~~
 </div>
 
-<div style="text-align: left;">
-    typeof if import export const return function
-</div>
+typeof if import export const return function
 
 ## 7 / 36
 
@@ -1006,8 +1004,6 @@ object.publicMethod();
     this~~
 </div>
 
-<div style="text-align: left;">
-    throw new try catch typeof if import export const return function
-</div>
+throw new try catch typeof if import export const return function
 
 ## 11 / 36
