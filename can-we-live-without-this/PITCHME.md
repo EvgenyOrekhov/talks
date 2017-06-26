@@ -928,10 +928,6 @@ $.ajax("http://example.com").done(console.log);
 +++
 
 ```js
-$.ajax("http://example.com").done(console.log);
-```
-
-```js
 $.ajax("http://example.com").done(console.log.bind(console));
 ```
 
