@@ -987,13 +987,13 @@ object.publicMethod();
 ---
 
 <div style="text-align: left;">
+    ~~with void yield async await class extends super static delete in finally
+    continue for while do else var let switch case break default instanceof this
+    throw new try catch~~
+</div>
 
-~~with void yield async await class extends super static delete in finally~~
-
-~~continue for while do else var let switch case break default instanceof this~~
-
-~~throw new try catch~~ typeof if import export const return function
-
+<div style="text-align: left;">
+    typeof if import export const return function
 </div>
 
 ## 7 / 36
@@ -1001,13 +1001,13 @@ object.publicMethod();
 +++
 
 <div style="text-align: left;">
+    ~~with void yield async await class extends super static delete in finally
+    continue for while do else var let switch case break default instanceof
+    this~~
+</div>
 
-~~with void yield async await class extends super static delete in finally~~
-
-~~continue for while do else var let switch case break default instanceof this~~
-
-throw new try catch typeof if import export const return function
-
+<div style="text-align: left;">
+    throw new try catch typeof if import export const return function
 </div>
 
 ## 11 / 36
