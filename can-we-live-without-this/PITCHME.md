@@ -184,8 +184,6 @@ with (obj) {
 
 @[-](?)
 
-<!-- .element: class="fragment" -->
-
 +++
 
 ## ~~with~~
