@@ -28,8 +28,6 @@ Edsger W. Dijkstra
 400 continue
 ```
 
-+++
-
 ```fortran
 if ( x.le.5) then
    y=0
@@ -37,6 +35,8 @@ else
    y=(x=5.)**2
 endif
 ```
+
+<!-- .element: class="fragment" -->
 
 +++
 
@@ -128,6 +128,14 @@ greeting = "HELLO, WORLD!"
 
 +++
 
+```haskell
+greeting = "Hello, World!"
+
+uppercasedGreeting = "HELLO, WORLD!"
+```
+
++++
+
 # ≠
 
 ---
@@ -173,14 +181,18 @@ with (obj) {
 }
 ```
 
-```text
+```js
 1. a = b;
 2. a = obj.b;
 3. obj.a = b;
 4. obj.a = obj.b;
 ```
 
+<!-- .element: class="fragment" -->
+
 ?
+
+<!-- .element: class="fragment" -->
 
 +++
 
@@ -335,6 +347,8 @@ delete object.property;
 object.property = undefined;
 ```
 
+<!-- .element: class="fragment" -->
+
 +++
 
 # ~~delete~~
@@ -357,6 +371,8 @@ if (object.property) {
 }
 ```
 
+<!-- .element: class="fragment" -->
+
 +++
 
 ```js
@@ -370,6 +386,8 @@ Object.keys(object).forEach(function (property) {
 
 });
 ```
+
+<!-- .element: class="fragment" -->
 
 +++
 
@@ -461,6 +479,8 @@ while (count < 10) {
 }
 ```
 
+<!-- .element: class="fragment" -->
+
 +++
 
 # ~~continue~~
@@ -521,6 +541,8 @@ function isNumber(arg) {
     return result;
 }
 ```
+
+<!-- .element: class="fragment" -->
 
 +++
 
@@ -608,13 +630,13 @@ function greet(name) {
 }
 ```
 
-+++
-
 ```js
 const object = {};
 
 object.property = "const forbids reassignment, not mutation";
 ```
+
+<!-- .element: class="fragment" -->
 
 +++
 
@@ -932,6 +954,8 @@ object.publicProperty; // "qwerty"
 
 object.publicMethod();
 ```
+
+<!-- .element: class="fragment" -->
 
 +++
 
