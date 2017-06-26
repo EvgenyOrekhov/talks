@@ -647,33 +647,38 @@ function log(number) {
 log(0);
 ```
 
-@[-](You passed number zero)
++++
+
+```js
+switch (number) {
+case 0:
+    result += `zero`;
+    break;
+case 1:
+    result += `one`;
+    break;
+default:
+    result += "greater than one";
+}
+```
 
 +++
 
 ```js
-function log(number) {
-    let result = "You passed number ";
-    const cases = {
-        0: function () {
-            result += `zero`;
-        },
-        1: function () {
-            result += `one`;
-        },
-        default: function () {
-            result += "greater than one";
-        }
-    };
-    const changeResult = cases[number] || cases.default;
-    changeResult();
-    console.log(result);
-}
-
-log(0);
+const cases = {
+    0: function () {
+        result += `zero`;
+    },
+    1: function () {
+        result += `one`;
+    },
+    default: function () {
+        result += "greater than one";
+    }
+};
+const changeResult = cases[number] || cases.default;
+changeResult();
 ```
-
-@[-](You passed number zero)
 
 +++
 
