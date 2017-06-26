@@ -775,6 +775,130 @@ if (typeof kalina.jump === "function") { // false
 
 ---
 
+# this
+
++++
+
+```js
+function Shape() {
+  this.x = 0;
+  this.y = 0;
+}
+
+Shape.prototype.move = function (x, y) {
+  this.x += x;
+  this.y += y;
+  console.info("Shape moved.");
+};
+```
+
+```js
+function Rectangle() {
+  Shape.call(this); // call super constructor
+}
+
+Rectangle.prototype = Object.create(Shape.prototype);
+Rectangle.prototype.constructor = Rectangle;
+
+var rect = new Rectangle();
+```
+
+<!-- .element: class="fragment" -->
+
++++
+
+## var self = this;
+
++++
+
+```js
+function MyObject() {
+    this.doSomething = function () {};
+
+    var self = this;
+
+    $("#foobar").on("click", function () {
+        self.doSomethng()
+    });
+}
+```
+
++++
+
+# =>
+
++++
+
+```js
+describe("my suite", () => {
+    it("my test", () => {
+        // should set the timeout of this test to 1000 ms; instead will fail
+        this.timeout(1000);
+        assert.ok(true);
+    });
+});
+```
+
++++
+
+```js
+$.ajax("http://example.com").done(console.log);
+```
+
+@[-](TypeError: Illegal invocation)
+
++++
+
+```js
+$.ajax("http://example.com").done(console.log);
+```
+
+```js
+$.ajax("http://example.com").done(console.log.bind(console));
+```
+
++++
+
+## Closures
+
+## (замыкания)
+
++++
+
+```js
+function makeObject(options) {
+    let privateProperties = {};
+
+    function privateFunction() {
+        // has access to options
+        // and privateProperties
+    }
+
+    return {
+        publicProperty: "bar",
+        publicMethod: function (methodArg) {
+            // has access to options,
+            // privateFunction,
+            // and privateProperties
+        }
+    };
+}
+```
+
+```js
+const object = makeObject({some: "options"});
+
+object.publicProperty; // "bar"
+
+object.publicMethod("foo");
+```
+
++++
+
+# ~~this~~
+
+---
+
 <div style="text-align: left;">
 
 ~~with void yield async await class extends super static delete in finally~~
