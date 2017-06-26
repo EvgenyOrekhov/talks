@@ -508,6 +508,33 @@ while (count < 10) {
 
 +++
 
+```js
+let count = 0;
+while (count < 10) {
+    count += 1;
+    if (count % 2 === 0) {
+        console.log(count);
+    }
+}
+```
+
+```js
+function logEvenUntil10(count) {
+    if (count <= 10) {
+        if (count % 2 === 0) {
+            console.log(count);
+        }
+        return logEvenUntil10(count + 1);
+    }
+}
+
+logEvenUntil10(1);
+```
+
+<!-- .element: class="fragment" -->
+
++++
+
 # ~~for~~
 
 # ~~while~~
