@@ -313,13 +313,13 @@ object.property = undefined;
 
 ```js
 if ("property" in object) {
-    // ...
+
 }
 ```
 
 ```js
 if (object.property) {
-    // ...
+
 }
 ```
 
@@ -327,13 +327,13 @@ if (object.property) {
 
 ```js
 for (var property in object) {
-    // ...
+
 }
 ```
 
 ```js
 Object.keys(object).forEach(function (property) {
-    // ...
+
 });
 ```
 
@@ -342,7 +342,7 @@ Object.keys(object).forEach(function (property) {
 ```js
 for (var property in object) {
     if (object.hasOwnProperty(property)) {
-        // ...
+
     }
 }
 ```
@@ -358,7 +358,7 @@ Object.keys(object).forEach(function (property) {
 ```js
 for (var property in object) {
     if (Object.prototype.hasOwnProperty.call(object, property)) {
-        // ...
+
     }
 }
 ```
