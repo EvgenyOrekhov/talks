@@ -622,24 +622,6 @@ function log(number) {
 
 log(0);
 ```
-+++
-
-```js
-function log(number) {
-    let result = "You passed number ";
-    switch (number) {
-    case 0:
-        result += `zero`;
-    case 1:
-        result += `one`;
-    default:
-        result += "greater than one";
-    }
-    console.log(result);
-}
-
-log(0);
-```
 
 @[-](?)
 @[-](You passed number zeroonegreater than one)
