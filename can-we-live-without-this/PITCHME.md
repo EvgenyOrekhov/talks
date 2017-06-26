@@ -589,9 +589,7 @@ for (var i = 1; i <= 10; i++) {
 }
 ```
 
-```text
 11 11 11 11 11 11 11 11 11 11
-```
 
 <!-- .element: class="fragment" -->
 
@@ -605,9 +603,7 @@ for (let i = 1; i <= 10; i++) {
 
 <!-- .element: class="fragment" -->
 
-```text
 1 2 3 4 5 6 7 8 9 10
-```
 
 <!-- .element: class="fragment" -->
 
