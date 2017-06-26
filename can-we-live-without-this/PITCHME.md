@@ -389,38 +389,12 @@ Object.keys(object).forEach(function (property) {
         return 2;
     }
     return 3;
-}()); // ?
+}());
 ```
 
-+++
-
-```js
-(function () {
-    try {
-        throw new Error();
-    } catch (err) {
-        return 1;
-    } finally {
-        return 2;
-    }
-    return 3;
-}()); // 2
-```
-
-+++
-
-```js
-(function () {
-    try {
-        throw new Error();
-    } catch (err) {
-        return 1;
-    } finally { // GO TO
-        return 2;
-    }
-    return 3;
-}()); // 2
-```
+@[-](?)
+@[-](2)
+@[6-8](GO TO)
 
 +++
 
@@ -656,8 +630,11 @@ function log(number) {
     console.log(result);
 }
 
-log(0); // You passed number zeroonegreater than one
+log(0);
 ```
+
+@[-](?)
+@[-](You passed number zeroonegreater than one)
 
 +++
 
@@ -677,8 +654,10 @@ function log(number) {
     console.log(result);
 }
 
-log(0); // You passed number zero
+log(0);
 ```
+
+@[-](You passed number zero)
 
 +++
 
@@ -701,8 +680,10 @@ function log(number) {
     console.log(result);
 }
 
-log(0); // You passed number zero
+log(0);
 ```
+
+@[-](You passed number zero)
 
 +++
 
