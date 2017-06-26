@@ -910,30 +910,27 @@ $.ajax("http://example.com").done(console.log.bind(console));
 
 ```js
 function makeObject(options) {
-    let privateProperties = {};
+    const privateProperties = {foo: "bar"};
 
     function privateFunction() {
-        // has access to options
-        // and privateProperties
+
     }
 
     return {
-        publicProperty: "bar",
-        publicMethod: function (methodArg) {
-            // has access to options,
-            // privateFunction,
-            // and privateProperties
+        publicProperty: "qwerty",
+        publicMethod: function () {
+
         }
     };
 }
 ```
 
 ```js
-const object = makeObject({some: "options"});
+const object = makeObject({abc: 123});
 
-object.publicProperty; // "bar"
+object.publicProperty; // "qwerty"
 
-object.publicMethod("foo");
+object.publicMethod();
 ```
 
 +++
