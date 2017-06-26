@@ -64,6 +64,9 @@ static int httpInit (tCommClass *http) {
     http->open = &httpOpen;
     return 0;
 }
+```
+
+```c
 int main (void) {
     int status;
     tCommClass commHttp;
@@ -88,6 +91,9 @@ class Http implements Openable
         return 0;
     }
 }
+```
+
+```php
 class Main
 {
     public function __construct(Openable $openable)
