@@ -40,7 +40,7 @@ endif
 
 +++
 
-# ~~GO TO~~
+## ~~GO TO~~
 
 ---
 
@@ -136,7 +136,7 @@ uppercasedGreeting = "HELLO, WORLD!"
 
 +++
 
-# ≠
+## ≠
 
 ---
 
@@ -171,7 +171,7 @@ Function.prototype.apply()
 
 ---
 
-# with
+## with
 
 +++
 
@@ -196,19 +196,19 @@ with (obj) {
 
 +++
 
-# ~~with~~
+## ~~with~~
 
 ---
 
-# void
+## void
 
 +++
 
-# ~~void~~
+## ~~void~~
 
 ---
 
-# yield
+## yield
 
 +++
 
@@ -254,13 +254,13 @@ generate(); // undefined
 
 +++
 
-# ~~yield~~
+## ~~yield~~
 
 ---
 
-# async
+## async
 
-# await
+## await
 
 +++
 
@@ -283,19 +283,19 @@ fs
 
 +++
 
-# ~~async~~
+## ~~async~~
 
-# ~~await~~
+## ~~await~~
 
 ---
 
-# class
+## class
 
-# extends
+## extends
 
-# super
+## super
 
-# static
+## static
 
 +++
 
@@ -325,17 +325,17 @@ var rect = new Rectangle();
 
 +++
 
-# ~~class~~
+## ~~class~~
 
-# ~~extends~~
+## ~~extends~~
 
-# ~~super~~
+## ~~super~~
 
-# ~~static~~
+## ~~static~~
 
 ---
 
-# delete
+## delete
 
 +++
 
@@ -351,11 +351,11 @@ object.property = undefined;
 
 +++
 
-# ~~delete~~
+## ~~delete~~
 
 ---
 
-# in
+## in
 
 +++
 
@@ -423,11 +423,11 @@ Object.keys(object).forEach(function (property) {
 
 +++
 
-# ~~in~~
+## ~~in~~
 
 ---
 
-# finally
+## finally
 
 +++
 
@@ -450,11 +450,11 @@ Object.keys(object).forEach(function (property) {
 
 +++
 
-# ~~finally~~
+## ~~finally~~
 
 ---
 
-# continue
+## continue
 
 +++
 
@@ -483,15 +483,15 @@ while (count < 10) {
 
 +++
 
-# ~~continue~~
+## ~~continue~~
 
 ---
 
-# for
+## for
 
-# while
+## while
 
-# do...while
+## do...while
 
 +++
 
@@ -535,15 +535,15 @@ logEvenUntil10(1);
 
 +++
 
-# ~~for~~
+## ~~for~~
 
-# ~~while~~
+## ~~while~~
 
-# ~~do...while~~
+## ~~do...while~~
 
 ---
 
-# else
+## else
 
 +++
 
@@ -573,11 +573,11 @@ function isNumber(arg) {
 
 +++
 
-# ~~else~~
+## ~~else~~
 
 ---
 
-# var
+## var
 
 +++
 
@@ -609,11 +609,11 @@ for (let i = 1; i <= 10; i++) {
 
 +++
 
-# ~~var~~
+## ~~var~~
 
 ---
 
-# let
+## let
 
 +++
 
@@ -663,17 +663,17 @@ object.property = "const forbids reassignment, not mutation";
 
 +++
 
-# ~~let~~
+## ~~let~~
 
 ---
 
-# switch
+## switch
 
-# case
+## case
 
-# break
+## break
 
-# default
+## default
 
 +++
 
@@ -753,17 +753,17 @@ changeResult();
 
 +++
 
-# ~~switch~~
+## ~~switch~~
 
-# ~~case~~
+## ~~case~~
 
-# ~~break~~
+## ~~break~~
 
-# ~~default~~
+## ~~default~~
 
 ---
 
-# instanceof
+## instanceof
 
 +++
 
@@ -858,11 +858,11 @@ if (typeof kalina.jump === "function") { // false
 
 +++
 
-# ~~instanceof~~
+## ~~instanceof~~
 
 ---
 
-# this
+## this
 
 +++
 
@@ -912,7 +912,7 @@ function MyObject() {
 
 +++
 
-# =>
+## =>
 
 +++
 
@@ -982,7 +982,7 @@ object.publicMethod();
 
 +++
 
-# ~~this~~
+## ~~this~~
 
 ---
 
