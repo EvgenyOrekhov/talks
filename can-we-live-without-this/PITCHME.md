@@ -182,9 +182,7 @@ with (obj) {
 4. obj.a = obj.b;
 ```
 
-<!-- .element: class="fragment" -->
-
-?
+@[-](?)
 
 <!-- .element: class="fragment" -->
 
