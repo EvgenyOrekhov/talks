@@ -313,41 +313,13 @@ object.property = undefined;
 
 ```js
 if ("property" in object) {
-
+    // ...
 }
 ```
 
 ```js
 if (object.property) {
-
-}
-```
-
-+++
-
-```js
-if (object.hasOwnProperty("property")) {
-
-}
-```
-
-```js
-if (object.property) {
-
-}
-```
-
-+++
-
-```js
-if (Object.prototype.hasOwnProperty.call(object, "property")) {
-
-}
-```
-
-```js
-if (object.property) {
-
+    // ...
 }
 ```
 
@@ -355,8 +327,38 @@ if (object.property) {
 
 ```js
 for (var property in object) {
-    if (Object.prototype.hasOwnProperty.call(object, property)) {
+    // ...
+}
+```
 
+```js
+Object.keys(object).forEach(function (property) {
+    // ...
+});
+```
+
++++
+
+```js
+for (var property in object) {
+    if (object.hasOwnProperty(property)) {
+        // ...
+    }
+}
+```
+
+```js
+Object.keys(object).forEach(function (property) {
+
+});
+```
+
++++
+
+```js
+for (var property in object) {
+    if (Object.prototype.hasOwnProperty.call(object, property)) {
+        // ...
     }
 }
 ```
