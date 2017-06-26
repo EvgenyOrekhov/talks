@@ -173,12 +173,14 @@ with (obj) {
 }
 ```
 
-```js
-a = b;
-a = obj.b;
-obj.a = b;
-obj.a = obj.b;
+```text
+1. a = b;
+2. a = obj.b;
+3. obj.a = b;
+4. obj.a = obj.b;
 ```
+
+?
 
 +++
 
