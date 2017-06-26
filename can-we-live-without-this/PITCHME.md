@@ -723,8 +723,48 @@ function Rabbit(name) {
 var lada = {brand: "lada"};
 Rabbit.prototype = lada;
 const kalina = Object.create(lada);
+if (kalina instanceof Rabbit) {
+    kalina.jump();
+}
+```
+
++++
+
+```js
+function Rabbit(name) {
+    this.name = name;
+    this.jump = function () {
+        cosnole.log(`${this.name} jumps!`);
+    };
+};
+var lada = {brand: "lada"};
+Rabbit.prototype = lada;
+const kalina = Object.create(lada);
 if (kalina instanceof Rabbit) { // true
-    kalina.jump(); // TypeError: kalina.jump is not a function
+    kalina.jump();
+}
+```
+
+@[-](TypeError: kalina.jump is not a function)
+
++++
+
+## Duck Typing
+
++++
+
+```js
+function Rabbit(name) {
+    this.name = name;
+    this.jump = function () {
+        cosnole.log(`${this.name} jumps!`);
+    };
+};
+var lada = {brand: "lada"};
+Rabbit.prototype = lada;
+const kalina = Object.create(lada);
+if (kalina instanceof Rabbit) { // true
+    kalina.jump();
 }
 ```
 
