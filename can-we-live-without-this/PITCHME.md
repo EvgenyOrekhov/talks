@@ -939,7 +939,7 @@ function makeObject(options) {
     const privateProperties = {foo: "bar"};
 
     function privateFunction() {
-
+        privateProperties.bar = "foo";
     }
 
     return {
