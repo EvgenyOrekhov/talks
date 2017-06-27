@@ -169,16 +169,16 @@ Function.prototype.apply()
 +++
 
 ```js
-with (obj) {
+with (object) {
     a = b;
 }
 ```
 
 ```js
 1. a = b;
-2. a = obj.b;
-3. obj.a = b;
-4. obj.a = obj.b;
+2. a = object.b;
+3. object.a = b;
+4. object.a = object.b;
 ```
 
 @[-](?)
