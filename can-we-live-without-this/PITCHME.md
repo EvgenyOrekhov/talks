@@ -494,12 +494,12 @@ while (count < 10) {
 +++
 
 ```js
-let count = 0;
-while (count < 10) {
-    count += 1;
+let count = 1;
+while (count <= 10) {
     if (count % 2 === 0) {
         console.log(count);
     }
+    count += 1;
 }
 ```
 
