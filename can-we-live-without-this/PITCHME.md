@@ -781,7 +781,7 @@ function Rabbit(name) {
         cosnole.log(`${this.name} jumps!`);
     };
 };
-var lada = {brand: "lada"};
+const lada = {brand: "lada"};
 Rabbit.prototype = lada;
 const kalina = Object.create(lada);
 if (kalina instanceof Rabbit) {
@@ -798,7 +798,7 @@ function Rabbit(name) {
         cosnole.log(`${this.name} jumps!`);
     };
 };
-var lada = {brand: "lada"};
+const lada = {brand: "lada"};
 Rabbit.prototype = lada;
 const kalina = Object.create(lada);
 if (kalina instanceof Rabbit) { // true
@@ -821,7 +821,7 @@ function Rabbit(name) {
         cosnole.log(`${this.name} jumps!`);
     };
 };
-var lada = {brand: "lada"};
+const lada = {brand: "lada"};
 Rabbit.prototype = lada;
 const kalina = Object.create(lada);
 if (kalina instanceof Rabbit) { // true
@@ -838,7 +838,7 @@ function Rabbit(name) {
         cosnole.log(`${this.name} jumps!`);
     };
 };
-var lada = {brand: "lada"};
+const lada = {brand: "lada"};
 Rabbit.prototype = lada;
 const kalina = Object.create(lada);
 if (typeof kalina.jump === "function") { // false
@@ -877,7 +877,7 @@ function Rectangle() {
 Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
-var rect = new Rectangle();
+const rect = new Rectangle();
 ```
 
 <!-- .element: class="fragment" -->
