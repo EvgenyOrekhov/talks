@@ -210,8 +210,6 @@ function makeGenerator(...) {
         return value;
     };
 }
-
-const generate = makeGenerator();
 ```
 
 +++
