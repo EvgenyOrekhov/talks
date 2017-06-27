@@ -968,6 +968,49 @@ object.publicMethod();
 
 +++
 
+## ~~Inheritance~~
+
+## Composition
+
++++
+
+```js
+function makeObject(options) {
+    const anotherObject = makeAnotherObject(options);
+
+    return Object.assign(
+        {},
+        anotherObject,
+        {
+            publicMethod: function () {
+                anotherObject.anotherMethod();
+            }
+        }
+    );
+}
+```
+
++++
+
+```js
+function makeObject(
+    options,
+    anotherObject = makeAnotherObject(options)
+) {
+    return Object.assign(
+        {},
+        anotherObject,
+        {
+            publicMethod: function () {
+                anotherObject.anotherMethod();
+            }
+        }
+    );
+}
+```
+
++++
+
 ## ~~this~~
 
 ---
