@@ -157,7 +157,6 @@ Object.setPrototypeOf()
 Object.prototype.isPrototypeOf()
 Object.prototype.hasOwnProperty()
 Object.create()
-
 Function.prototype.bind()
 Function.prototype.call()
 Function.prototype.apply()
@@ -220,7 +219,6 @@ const generate = makeGenerator();
 ```js
 function makeGenerator(array) {
     let i = 0;
-
     return function generate() {
         if (i < array.length) {
             const value = array[i];
@@ -259,7 +257,6 @@ fs.readFile("/etc/passwd", function (err, data) {
     if (err) {
         console.error(err);
     }
-
     console.log(data);
 });
 ```
