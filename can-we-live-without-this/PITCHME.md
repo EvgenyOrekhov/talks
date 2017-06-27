@@ -504,16 +504,14 @@ while (count <= 10) {
 ```
 
 ```js
-function logEvenUntil10(count) {
+(function logEvenUntil10(count = 1) {
     if (count <= 10) {
         if (count % 2 === 0) {
             console.log(count);
         }
         return logEvenUntil10(count + 1);
     }
-}
-
-logEvenUntil10(1);
+}());
 ```
 
 <!-- .element: class="fragment" -->
