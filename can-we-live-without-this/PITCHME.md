@@ -998,6 +998,37 @@ function makeObject(
 
 +++
 
+```js
+function makeObject(options) {
+    const anotherObject = makeAnotherObject(options);
+    const someOtherObject = makeSomeOtherObject(options);
+
+    return Object.assign(anotherObject, someOtherObject, {
+        publicMethod: function () {
+            anotherObject.anotherMethod();
+        }
+    });
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const anotherObject = makeAnotherObject(options);
+    const someOtherObject = makeSomeOtherObject(options);
+
+    return {
+        publicMethod: function () {
+            anotherObject.anotherMethod();
+            someOtherObject.someOtherMethod();
+        }
+    };
+}
+```
+
++++
+
 ## ~~this~~
 
 ---
