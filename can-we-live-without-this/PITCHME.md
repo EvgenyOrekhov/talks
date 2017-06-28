@@ -1031,6 +1031,18 @@ function makeObject(options) {
 
 ---
 
+## throw
+
++++
+
+
+
++++
+
+## ~~throw~~
+
+---
+
 ~~with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this
 throw new try catch~~
