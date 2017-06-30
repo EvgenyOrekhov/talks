@@ -263,7 +263,7 @@ fs.readFile("/etc/passwd", function (err, data) {
 fs
     .readFile("/etc/passwd")
     .then(console.log)
-    .catch(console.error)
+    .catch(console.error);
 ```
 
 +++
