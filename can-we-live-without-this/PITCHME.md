@@ -926,6 +926,39 @@ $.ajax("http://example.com").done(console.log.bind(console));
 
 +++
 
+```js
+function Point(x, y) {
+    this.x = x;
+    this.y = y;
+}
+
+const point = Point(4, 2);
+
+console.log(point.x + point.y);
+```
+
+@[-](?)
+@[-](TypeError: Cannot read property 'x' of undefined)
+@[6](missing `new`)
+
++++
+
+```js
+function Point(x, y) {
+    this.x = x;
+    this.y = y;
+}
+
+const point = Point(4, 2);
+
+console.log(x + y);
+```
+
+@[-](6)
+@[2-3](this === window)
+
++++
+
 ## Closures
 
 ## (замыкания)
@@ -1028,6 +1061,24 @@ function makeObject(options) {
 +++
 
 ## ~~this~~
+
+## ~~new~~
+
+<!-- .element: class="fragment" -->
+
+```js
+Object.prototype.__proto__
+Object.prototype.constructor
+Object.setPrototypeOf()
+Object.prototype.isPrototypeOf()
+Object.prototype.hasOwnProperty()
+Object.create()
+Function.prototype.bind()
+Function.prototype.call()
+Function.prototype.apply()
+```
+
+<!-- .element: class="fragment" -->
 
 ---
 
