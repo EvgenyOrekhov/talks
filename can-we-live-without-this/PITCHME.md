@@ -1032,14 +1032,36 @@ function makeObject(options) {
 ---
 
 ## throw
+## try
+## catch
 
 +++
 
+```js
+function divide(dividend, divisor) {
+    if (divisor === 0) {
+        throw new Error("Division by zero");
+    }
+    return dividend / divisor;
+}
+```
 
+```js
+function divide(dividend, divisor) {
+    if (divisor === 0) {
+        return Result.Error("Division by zero");
+    }
+    return Result.Ok(dividend / divisor);
+}
+```
+
+<!-- .element: class="fragment" -->
 
 +++
 
 ## ~~throw~~
+## ~~try~~
+## ~~catch~~
 
 ---
 
