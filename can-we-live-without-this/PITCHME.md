@@ -1089,21 +1089,46 @@ Function.prototype.apply()
 +++
 
 ```js
-function divide(dividend, divisor) {
-    if (divisor === 0) {
-        throw new Error("Division by zero");
+function readFile(name) {
+    if (doesFileExist(name)) {
+        return actualReadFile(name);
     }
-    return dividend / divisor;
+    throw new Error("File not found");
 }
 ```
 
 ```js
-function divide(dividend, divisor) {
-    if (divisor === 0) {
-        return Result.Error("Division by zero");
-    }
-    return Result.Ok(dividend / divisor);
+try {
+    const data = readFile("/etc/passwd");
+    const json = JSON.parse(data);
+    console.log(json);
+} catch (err) {
+    console.error(err);
 }
+```
+
+<!-- .element: class="fragment" -->
+
++++
+
+```js
+function readFile(name) {
+    if (doesFileExist(name)) {
+        return Promise.resolve(
+            actualReadFile(name)
+        );
+    }
+    return Promise.reject(
+        new Error("File not found")
+    );
+}
+```
+
+```js
+readFile("/etc/passwd")
+    .then(JSON.parse)
+    .then(console.log)
+    .catch(console.error);
 ```
 
 <!-- .element: class="fragment" -->
