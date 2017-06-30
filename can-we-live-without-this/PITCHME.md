@@ -142,7 +142,7 @@ uppercasedGreeting = "HELLO, WORLD!"
 
 with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this
-throw new try catch typeof if import export const return function
+new throw try catch typeof if import export const return function
 
 ## 36
 
@@ -1045,7 +1045,7 @@ function makeObject(options) {
 
 ~~with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this
-throw new try catch~~
+new throw try catch~~
 
 typeof if import export const return function
 
@@ -1056,6 +1056,6 @@ typeof if import export const return function
 ~~with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this~~
 
-throw new try catch typeof if import export const return function
+new throw try catch typeof if import export const return function
 
 ## 11 / 36
