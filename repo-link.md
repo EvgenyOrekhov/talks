@@ -1,7 +1,7 @@
 <h3>
     <img
-        style="height: 120px; vertical-align: middle; background: #fff; border-radius: 50%; border: none;"
-        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+        style="vertical-align: middle; background: #000; border-color: #000; border-radius: 50%;"
+        src="http://johnny-five.io/img/github-icon.png"
         alt="GitHub mark"
     >
     <a href="https://github.com/EvgenyOrekhov/talks">EvgenyOrekhov/talks</a>
