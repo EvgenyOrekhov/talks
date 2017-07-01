@@ -967,6 +967,8 @@ Douglas Crockford
 
 +++?image=https://i.redd.it/h7nt4keyd7oy.jpg&size=contain
 
++++
+
 ## Closures
 
 ## (замыкания)
