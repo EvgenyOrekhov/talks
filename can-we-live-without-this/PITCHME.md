@@ -977,14 +977,14 @@ Douglas Crockford
 
 ```js
 function makeObject(options) {
-    const privateProperties = {foo: "bar"};
+    const state = {foo: "bar"};
 
     function privateFunction() {
-        privateProperties.bar = "foo";
+        state.bar = options.foo;
     }
 
     function publicMethod() {
-        return privateProperties.foo;
+        return state.foo;
     }
 
     return {
