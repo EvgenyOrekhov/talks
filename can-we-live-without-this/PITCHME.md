@@ -1004,7 +1004,13 @@ object.publicMethod();
 
 +++
 
+## Inheritance
+
++++
+
 ## ~~Inheritance~~
+
++++
 
 ## Composition
 
