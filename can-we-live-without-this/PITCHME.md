@@ -142,7 +142,7 @@ uppercasedGreeting = "HELLO, WORLD!"
 
 with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this
-new throw try catch typeof if import export const return function
+throw try catch new typeof if import export const return function
 
 ## 36
 
@@ -1067,17 +1067,17 @@ function divide(dividend, divisor) {
 
 ~~with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this
-new throw try catch~~
+throw try catch~~
 
-typeof if import export const return function
+new typeof if import export const return function
 
-## 7 / 36
+## 8 / 36
 
 +++
 
 ~~with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this~~
 
-new throw try catch typeof if import export const return function
+throw try catch new typeof if import export const return function
 
 ## 11 / 36
