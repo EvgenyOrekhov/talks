@@ -959,6 +959,14 @@ console.log(x + y);
 
 +++
 
+![Douglas Crockford](https://upload.wikimedia.org/wikipedia/commons/2/24/Douglas_Crockford%2C_February_2013.jpg)
+
+Douglas Crockford
+
+<!-- .element: class="fragment" -->
+
++++?image=https://i.redd.it/h7nt4keyd7oy.jpg&size=contain
+
 ## Closures
 
 ## (замыкания)
