@@ -983,11 +983,13 @@ function makeObject(options) {
         privateProperties.bar = "foo";
     }
 
+    function publicMethod() {
+        return privateProperties.foo;
+    }
+
     return {
         publicProperty: "qwerty",
-        publicMethod: function () {
-
-        }
+        publicMethod
     };
 }
 ```
@@ -997,7 +999,7 @@ const object = makeObject({abc: 123});
 
 object.publicProperty; // "qwerty"
 
-object.publicMethod();
+object.publicMethod(); // "bar"
 ```
 
 <!-- .element: class="fragment" -->
@@ -1020,10 +1022,12 @@ object.publicMethod();
 function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
 
+    function publicMethod() {
+        anotherObject.anotherMethod();
+    }
+
     return Object.assign(anotherObject, {
-        publicMethod: function () {
-            anotherObject.anotherMethod();
-        }
+        publicMethod
     });
 }
 ```
@@ -1035,10 +1039,12 @@ function makeObject(
     options,
     anotherObject = makeAnotherObject(options)
 ) {
+    function publicMethod() {
+        anotherObject.anotherMethod();
+    }
+
     return Object.assign(anotherObject, {
-        publicMethod: function () {
-            anotherObject.anotherMethod();
-        }
+        publicMethod
     });
 }
 ```
@@ -1049,11 +1055,13 @@ function makeObject(
 function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
     const someOtherObject = makeSomeOtherObject(options);
+
+    function publicMethod() {
+        anotherObject.anotherMethod();
+    }
 
     return Object.assign(anotherObject, someOtherObject, {
-        publicMethod: function () {
-            anotherObject.anotherMethod();
-        }
+        publicMethod
     });
 }
 ```
@@ -1065,11 +1073,13 @@ function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
     const someOtherObject = makeSomeOtherObject(options);
 
+    function publicMethod() {
+        anotherObject.anotherMethod();
+        someOtherObject.someOtherMethod();
+    }
+
     return {
-        publicMethod: function () {
-            anotherObject.anotherMethod();
-            someOtherObject.someOtherMethod();
-        }
+        publicMethod
     };
 }
 ```
