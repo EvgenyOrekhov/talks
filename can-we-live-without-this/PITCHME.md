@@ -978,15 +978,12 @@ Douglas Crockford
 ```js
 function makeObject(options) {
     const state = {foo: "bar"};
-
     function privateFunction() {
         state.bar = options.foo;
     }
-
     function publicMethod() {
         return state.foo;
     }
-
     return {
         publicProperty: "qwerty",
         publicMethod
