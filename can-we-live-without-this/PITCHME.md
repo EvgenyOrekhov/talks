@@ -979,7 +979,7 @@ Douglas Crockford
 function makeObject(options) {
     const state = {foo: "bar"};
     function privateFunction() {
-        state.bar = options.foo;
+        state.bar = options.abc;
     }
     function publicMethod() {
         return state.foo;
