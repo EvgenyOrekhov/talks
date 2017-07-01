@@ -1322,13 +1322,4 @@ echo $app($_REQUEST);
 
 ### [Жаргон функционального программирования](https://habrahabr.ru/post/310172/)
 
----
-
-<h3>
-    <img
-        style="vertical-align: middle; background: none; border: none;"
-        src="http://johnny-five.io/img/github-icon.png"
-        alt="GitHub mark"
-    >
-    <a href="https://github.com/EvgenyOrekhov/talks">EvgenyOrekhov/talks</a>
-</h3>
+---?include=repo-link.md
