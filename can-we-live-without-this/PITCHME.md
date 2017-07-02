@@ -976,6 +976,40 @@ Douglas Crockford
 +++
 
 ```js
+function addClickHandler() {
+    const message = $("#message");
+
+    $("#button").on("click", function showMessage() {
+        message.show();
+    });
+}
+```
+
++++
+
+```js
+function makeCounter() {
+    let count = 0;
+    return function next() {
+        count += 1;
+        return count;
+    }
+}
+```
+
+```js
+const counter = makeCounter();
+
+counter(); // 1
+counter(); // 2
+counter(); // 3
+```
+
+<!-- .element: class="fragment" -->
+
++++
+
+```js
 function makeObject(options) {
     const state = {foo: "bar"};
     function privateFunction() {
