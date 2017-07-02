@@ -518,6 +518,20 @@ while (count <= 10) {
 
 +++
 
+```js
+function quicksort([pivot, ...rest]) {
+    return pivot === undefined
+        ? rest
+        : [
+            ...quicksort(rest.filter((item) => item <= pivot)),
+            pivot,
+            ...quicksort(rest.filter((item) => item > pivot))
+        ];
+}
+```
+
++++
+
 ## ~~for~~
 
 ## ~~while~~
