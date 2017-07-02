@@ -980,7 +980,7 @@ function addClickHandler() {
     const message = $("#message");
 
     $("#button").on("click", function showMessage() {
-        message.show();
+        message.toggle();
     });
 }
 ```
