@@ -105,8 +105,9 @@ class Main
 
 +++
 
-## ~~function* &pointers~~
-## ~~&ast;&ast;virtual * tables~~
+## ~~function&ast; &pointers~~
+
+## ~~&ast;&ast;virtual &ast; tables~~
 
 ---
 
@@ -1154,7 +1155,9 @@ Function.prototype.apply()
 ---
 
 ## throw
+
 ## try
+
 ## catch
 
 +++
@@ -1207,7 +1210,9 @@ readFile("/etc/passwd")
 +++
 
 ## ~~throw~~
+
 ## ~~try~~
+
 ## ~~catch~~
 
 ---
