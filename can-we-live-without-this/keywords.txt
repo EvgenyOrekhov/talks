@@ -51,10 +51,10 @@ Function.prototype.apply()
 
 throw
 
-new
-
 try
 catch
+
+new
 
 typeof
 
