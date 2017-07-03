@@ -1229,4 +1229,8 @@ throw try catch new typeof if import export const return function
 
 ## 11 / 36
 
+---
+
+## [JSLint](http://jslint.com)
+
 ---?include=repo-link.md
