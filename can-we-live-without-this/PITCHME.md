@@ -988,6 +988,10 @@ Douglas Crockford
 
 ## (замыкания)
 
++++?image=can-we-live-without-this/img/closure-1.jpg&size=contain
+
++++?image=can-we-live-without-this/img/closure-2.jpg&size=contain
+
 +++
 
 ```js
