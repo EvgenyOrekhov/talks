@@ -1030,6 +1030,96 @@ counter(); // 3
 
 ```js
 function makeObject(options) {
+
+
+
+
+
+
+
+
+
+
+
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const state = {foo: "bar"};
+
+
+
+
+
+
+
+
+
+
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const state = {foo: "bar"};
+    function privateFunction() {
+        state.bar = options.abc;
+    }
+
+
+
+
+
+
+
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const state = {foo: "bar"};
+    function privateFunction() {
+        state.bar = options.abc;
+    }
+    function publicMethod() {
+        return state.foo;
+    }
+
+
+
+
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const state = {foo: "bar"};
+    function privateFunction() {
+        state.bar = options.abc;
+    }
+    function publicMethod() {
+        return state.foo;
+    }
+    return {
+        publicProperty: "qwerty",
+        publicMethod
+    };
+}
+```
+
++++
+
+```js
+function makeObject(options) {
     const state = {foo: "bar"};
     function privateFunction() {
         state.bar = options.abc;
@@ -1065,6 +1155,54 @@ object.publicMethod(); // "bar"
 +++
 
 ## Composition
+
++++
+
+```js
+function makeObject(options) {
+
+
+
+
+
+
+
+
+
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const anotherObject = makeAnotherObject(options);
+
+
+
+
+
+
+
+
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const anotherObject = makeAnotherObject(options);
+
+    function publicMethod() {
+        anotherObject.anotherMethod();
+    }
+
+
+
+
+}
+```
 
 +++
 
