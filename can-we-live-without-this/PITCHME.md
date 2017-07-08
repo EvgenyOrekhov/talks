@@ -1237,6 +1237,20 @@ function makeObject(
 }
 ```
 
+```js
+const object = makeObject({abc: 123});
+```
+
+<!-- .element: class="fragment" -->
+
+```js
+const someOtherObject = makeSomeOtherObject();
+
+const object = makeObject({abc: 123}, someOtherObject);
+```
+
+<!-- .element: class="fragment" -->
+
 +++
 
 ```js
