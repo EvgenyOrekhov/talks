@@ -1223,6 +1223,58 @@ function makeObject(options) {
 +++
 
 ```js
+function makeObject(options) {
+    const anotherObject = makeAnotherObject(options);
+    const someOtherObject = makeSomeOtherObject(options);
+
+    function publicMethod() {
+        anotherObject.anotherMethod();
+        someOtherObject.someOtherMethod();
+    }
+
+    return Object.assign(anotherObject, someOtherObject, {
+        publicMethod
+    });
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const anotherObject = makeAnotherObject(options);
+    const someOtherObject = makeSomeOtherObject(options);
+
+    function publicMethod() {
+        anotherObject.anotherMethod();
+        someOtherObject.someOtherMethod();
+    }
+
+    return {
+        publicMethod
+    };
+}
+```
+
++++
+
+```js
+function makeObject(options) {
+    const anotherObject = makeAnotherObject(options);
+
+    function publicMethod() {
+        anotherObject.anotherMethod();
+    }
+
+    return Object.assign(anotherObject, {
+        publicMethod
+    });
+}
+```
+
++++
+
+```js
 function makeObject(
     options,
     anotherObject = makeAnotherObject(options)
@@ -1250,41 +1302,6 @@ const object = makeObject({abc: 123}, someOtherObject);
 ```
 
 <!-- .element: class="fragment" -->
-
-+++
-
-```js
-function makeObject(options) {
-    const anotherObject = makeAnotherObject(options);
-    const someOtherObject = makeSomeOtherObject(options);
-
-    function publicMethod() {
-        anotherObject.anotherMethod();
-    }
-
-    return Object.assign(anotherObject, someOtherObject, {
-        publicMethod
-    });
-}
-```
-
-+++
-
-```js
-function makeObject(options) {
-    const anotherObject = makeAnotherObject(options);
-    const someOtherObject = makeSomeOtherObject(options);
-
-    function publicMethod() {
-        anotherObject.anotherMethod();
-        someOtherObject.someOtherMethod();
-    }
-
-    return {
-        publicMethod
-    };
-}
-```
 
 +++
 
