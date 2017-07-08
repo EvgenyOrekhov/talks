@@ -1048,7 +1048,7 @@ function makeObject(options) {
 
 ```js
 function makeObject(options) {
-    const state = {foo: "bar"};
+    const state = {/* ... */};
 
 
 
@@ -1066,12 +1066,12 @@ function makeObject(options) {
 
 ```js
 function makeObject(options) {
-    const state = {foo: "bar"};
+    const state = {/* ... */};
     function methodA() {
-        state.bar = options.abc;
+        /* options, state */
     }
     function methodB() {
-        return state.foo;
+        /* options, state, methodA */
     }
 
 
@@ -1084,12 +1084,12 @@ function makeObject(options) {
 
 ```js
 function makeObject(options) {
-    const state = {foo: "bar"};
+    const state = {/* ... */};
     function methodA() {
-        state.bar = options.abc;
+        /* options, state */
     }
     function methodB() {
-        return state.foo;
+        /* options, state, methodA */
     }
     return {
         methodB
@@ -1101,12 +1101,12 @@ function makeObject(options) {
 
 ```js
 function makeObject(options) {
-    const state = {foo: "bar"};
+    const state = {/* ... */};
     function methodA() {
-        state.bar = options.abc;
+        /* options, state */
     }
     function methodB() {
-        return state.foo;
+        /* options, state, methodA */
     }
     return {
         methodB
@@ -1117,7 +1117,7 @@ function makeObject(options) {
 ```js
 const object = makeObject({abc: 123});
 
-object.methodB(); // "bar"
+object.methodB();
 ```
 
 <!-- .element: class="fragment" -->
@@ -1172,7 +1172,7 @@ function makeObject(options) {
 function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
 
-    function methodB() {
+    function method() {
         anotherObject.anotherMethod();
     }
 
@@ -1188,12 +1188,12 @@ function makeObject(options) {
 function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
 
-    function methodB() {
+    function method() {
         anotherObject.anotherMethod();
     }
 
     return Object.assign(anotherObject, {
-        methodB
+        method
     });
 }
 ```
@@ -1205,13 +1205,13 @@ function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
     const someOtherObject = makeSomeOtherObject(options);
 
-    function methodB() {
+    function method() {
         anotherObject.anotherMethod();
         someOtherObject.someOtherMethod();
     }
 
     return Object.assign(anotherObject, someOtherObject, {
-        methodB
+        method
     });
 }
 ```
@@ -1223,13 +1223,13 @@ function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
     const someOtherObject = makeSomeOtherObject(options);
 
-    function methodB() {
+    function method() {
         anotherObject.anotherMethod();
         someOtherObject.someOtherMethod();
     }
 
     return {
-        methodB
+        method
     };
 }
 ```
@@ -1241,12 +1241,12 @@ function makeObject(
     options,
     anotherObject = makeAnotherObject(options)
 ) {
-    function methodB() {
+    function method() {
         anotherObject.anotherMethod();
     }
 
     return Object.assign(anotherObject, {
-        methodB
+        method
     });
 }
 ```
