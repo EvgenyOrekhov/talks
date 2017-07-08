@@ -1040,7 +1040,6 @@ function makeObject(options) {
 
 
 
-
 }
 ```
 
@@ -1049,7 +1048,6 @@ function makeObject(options) {
 ```js
 function makeObject(options) {
     const state = {/* ... */};
-
 
 
 
@@ -1073,7 +1071,6 @@ function makeObject(options) {
     function methodB() {
         /* options, state, methodA */
     }
-
 
 
 
