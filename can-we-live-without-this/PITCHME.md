@@ -1067,28 +1067,10 @@ function makeObject(options) {
 ```js
 function makeObject(options) {
     const state = {foo: "bar"};
-    function privateFunction() {
+    function methodA() {
         state.bar = options.abc;
     }
-
-
-
-
-
-
-
-}
-```
-
-+++
-
-```js
-function makeObject(options) {
-    const state = {foo: "bar"};
-    function privateFunction() {
-        state.bar = options.abc;
-    }
-    function publicMethod() {
+    function methodB() {
         return state.foo;
     }
 
@@ -1103,15 +1085,14 @@ function makeObject(options) {
 ```js
 function makeObject(options) {
     const state = {foo: "bar"};
-    function privateFunction() {
+    function methodA() {
         state.bar = options.abc;
     }
-    function publicMethod() {
+    function methodB() {
         return state.foo;
     }
     return {
-        publicProperty: "qwerty",
-        publicMethod
+        methodB
     };
 }
 ```
@@ -1121,15 +1102,14 @@ function makeObject(options) {
 ```js
 function makeObject(options) {
     const state = {foo: "bar"};
-    function privateFunction() {
+    function methodA() {
         state.bar = options.abc;
     }
-    function publicMethod() {
+    function methodB() {
         return state.foo;
     }
     return {
-        publicProperty: "qwerty",
-        publicMethod
+        methodB
     };
 }
 ```
@@ -1137,9 +1117,7 @@ function makeObject(options) {
 ```js
 const object = makeObject({abc: 123});
 
-object.publicProperty; // "qwerty"
-
-object.publicMethod(); // "bar"
+object.methodB(); // "bar"
 ```
 
 <!-- .element: class="fragment" -->
@@ -1194,7 +1172,7 @@ function makeObject(options) {
 function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
 
-    function publicMethod() {
+    function methodB() {
         anotherObject.anotherMethod();
     }
 
@@ -1210,12 +1188,12 @@ function makeObject(options) {
 function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
 
-    function publicMethod() {
+    function methodB() {
         anotherObject.anotherMethod();
     }
 
     return Object.assign(anotherObject, {
-        publicMethod
+        methodB
     });
 }
 ```
@@ -1227,13 +1205,13 @@ function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
     const someOtherObject = makeSomeOtherObject(options);
 
-    function publicMethod() {
+    function methodB() {
         anotherObject.anotherMethod();
         someOtherObject.someOtherMethod();
     }
 
     return Object.assign(anotherObject, someOtherObject, {
-        publicMethod
+        methodB
     });
 }
 ```
@@ -1245,13 +1223,13 @@ function makeObject(options) {
     const anotherObject = makeAnotherObject(options);
     const someOtherObject = makeSomeOtherObject(options);
 
-    function publicMethod() {
+    function methodB() {
         anotherObject.anotherMethod();
         someOtherObject.someOtherMethod();
     }
 
     return {
-        publicMethod
+        methodB
     };
 }
 ```
@@ -1263,12 +1241,12 @@ function makeObject(
     options,
     anotherObject = makeAnotherObject(options)
 ) {
-    function publicMethod() {
+    function methodB() {
         anotherObject.anotherMethod();
     }
 
     return Object.assign(anotherObject, {
-        publicMethod
+        methodB
     });
 }
 ```
