@@ -1259,22 +1259,6 @@ function makeObject(options) {
 +++
 
 ```js
-function makeObject(options) {
-    const anotherObject = makeAnotherObject(options);
-
-    function publicMethod() {
-        anotherObject.anotherMethod();
-    }
-
-    return Object.assign(anotherObject, {
-        publicMethod
-    });
-}
-```
-
-+++
-
-```js
 function makeObject(
     options,
     anotherObject = makeAnotherObject(options)
