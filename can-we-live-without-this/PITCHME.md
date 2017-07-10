@@ -44,11 +44,15 @@ endif
 
 ---
 
-![Alan Kay](http://s7.computerhistory.org/is/image/CHM/500004717-03-01?$re-medium$)
+![Ole-Johan Dahl and Kristen Nygaard](https://history-computer.com/ModernComputer/Software/images/Dahl_and_Nygaard.jpg)
 
-Alan Kay
+Ole-Johan Dahl and Kristen Nygaard
 
 <!-- .element: class="fragment" -->
+
++++
+
+## Simula 67 (1967)
 
 +++
 
