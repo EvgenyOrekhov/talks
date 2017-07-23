@@ -1,9 +1,5 @@
 # Can we live without this?
 
-+++
-
-# Can we live without $this?
-
 ---
 
 ![Edsger W. Dijkstra](http://cs-exhibitions.uni-klu.ac.at/fileadmin/template/documents/picture/EWD_thinking_1963.jpg)
@@ -867,6 +863,14 @@ if (typeof kalina.jump === "function") { // false
 ## ~~instanceof~~
 
 ---
+
+## Can we live without this?
+
++++
+
+## Can we live without $this?
+
++++
 
 ## this
 
