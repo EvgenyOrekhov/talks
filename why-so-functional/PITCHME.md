@@ -620,8 +620,7 @@ $curry = function (callable $f): callable {
 
 @[1]
 @[2-3]
-@[5]
-@[17]
+@[5, 17]
 @[10-14]
 
 +++
