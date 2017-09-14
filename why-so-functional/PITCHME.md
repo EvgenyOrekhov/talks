@@ -415,10 +415,8 @@ $result = $bashExperience
     : 0;
 ```
 
-@[4-6]
-@[11-13]
-@[1-3]
-@[8-10]
+@[1-3, 8-10]
+@[4-6, 11-13]
 
 ---
 
@@ -772,8 +770,7 @@ $programmersSkills = array_map(
 );
 ```
 
-@[7]
-@[10-12]
+@[7, 10-12]
 @[-]
 
 +++
@@ -858,8 +855,7 @@ $programmers = array_filter(
 );
 ```
 
-@[7]
-@[11-13]
+@[7, 11-13]
 @[-]
 
 +++
@@ -1114,8 +1110,7 @@ $composeMany = function (array $fs) use ($compose): callable {
 
 @[7]
 @[8-9]
-@[10]
-@[1-5]
+@[10, 1-5]
 @[11-13]
 @[-]
 
@@ -1178,8 +1173,7 @@ $flatMap = function ($f) use ($pipe, $map, $flat) {
 $allSkills = $flatMap($prop('skills'), $programmers);
 ```
 
-@[1-2]
-@[8]
+@[1-2, 8]
 
 +++
 
