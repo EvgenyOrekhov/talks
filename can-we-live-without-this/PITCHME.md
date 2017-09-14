@@ -680,58 +680,56 @@ object.property = "const forbids reassignment, not mutation";
 +++
 
 ```js
-function log(number) {
-    let result = "You passed number ";
-    switch (number) {
-    case 0:
-        result += `zero`;
-    case 1:
-        result += `one`;
+function greet(name, language) {
+    switch (language) {
+    case "ru":
+        name = "Привет, " + name + "!";
+    case "es":
+        name = "¡Hola, " + name + "!";
     default:
-        result += "greater than one";
+        name = "Hello, " + name + "!";
     }
-    console.log(result);
+    console.log(name);
 }
 
-log(0);
+greet("Деннис", "ru");
 ```
 
 @[-](?)
-@[-](You passed number zeroonegreater than one)
+@[-](Hello, ¡Hola, Привет, Деннис!!!)
 
 +++
 
 ```js
-function log(number) {
-    let result = "You passed number ";
-    switch (number) {
-    case 0:
-        result += `zero`;
+function greet(name, language) {
+    switch (language) {
+    case "ru":
+        name = "Привет, " + name + "!";
         break;
-    case 1:
-        result += `one`;
+    case "es":
+        name = "¡Hola, " + name + "!";
         break;
     default:
-        result += "greater than one";
+        name = "Hello, " + name + "!";
     }
-    console.log(result);
+    console.log(name);
 }
 
-log(0);
+greet("Деннис", "ru");
 ```
 
 +++
 
 ```js
-switch (number) {
-case 0:
-    result += `zero`;
+switch (language) {
+case "ru":
+    name = "Привет, " + name + "!";
     break;
-case 1:
-    result += `one`;
+case "es":
+    name = "¡Hola, " + name + "!";
     break;
 default:
-    result += "greater than one";
+    name = "Hello, " + name + "!";
 }
 ```
 
@@ -739,17 +737,17 @@ default:
 
 ```js
 const cases = {
-    0: function () {
-        result += `zero`;
+    "ru": function () {
+        name = "Привет, " + name + "!";
     },
-    1: function () {
-        result += `one`;
+    "es": function () {
+        name = "¡Hola, " + name + "!";
     },
     default: function () {
-        result += "greater than one";
+        name = "Hello, " + name + "!";
     }
 };
-const changeResult = cases[number] || cases.default;
+const changeResult = cases[language] || cases.default;
 changeResult();
 ```
 
