@@ -979,6 +979,7 @@ const point = Point(4, 2);
 console.log(x + y);
 ```
 
+@[-](?)
 @[-](6)
 @[2-3](this === window)
 
