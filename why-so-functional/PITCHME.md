@@ -40,7 +40,7 @@ $employees = [
 
 Вычислить среднее количество лет опыта работы с bash у программистов
 
----?image=http://cdn1.thedataschool.co.uk/wp-content/uploads/2017/04/18225042/df4dbbdfd57a1e99f7c18a9628b4ba82_since-ychallenge-accepted-meme-meme-challenge-accepted_1920-1200.jpeg&size=contain
+---?image=why-so-functional/img/challenge-accepted.jpeg&size=contain
 
 ---
 
@@ -169,7 +169,7 @@ $result = $count ? $sum / $count : 0;
 
 > **Notice**: Undefined index: name
 
-+++?image=http://memedad.com/memes/172636.gif&size=contain
++++?image=why-so-functional/img/picard.gif&size=contain
 
 > **Notice**: Undefined index: name
 
@@ -918,14 +918,14 @@ $result = $bashExperience
     : 0;
 ```
 
----?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
+---?image=why-so-functional/img/bender.jpg&size=contain
 
 <h2 style="padding-bottom: 35%; color: #fff;">_underdash.php</h2>
 
 <br>
 <br>
 
-+++?image=http://i1.kym-cdn.com/entries/icons/original/000/010/832/bender.jpg&size=contain
++++?image=why-so-functional/img/bender.jpg&size=contain
 
 <h2 style="padding-bottom: 35%; color: #fff;">_underdash.php/fp</h2>
 
@@ -1057,7 +1057,7 @@ $result = $average(
 );
 ```
 
-+++?image=https://allisonmaruska.files.wordpress.com/2015/10/we-need-to-go-deeper.jpg&size=contain
++++?image=why-so-functional/img/we-need-to-go-deeper.jpg&size=contain
 
 ---
 
@@ -1291,7 +1291,7 @@ $averageBashExpForProgrammers = $pipe([
 - разделение данных и вычислений
 - подкреплено математическими теориями
 
----?image=http://real-software-components.com/API_RIA/technologies/images/OOP_ac_il.png&size=contain
+---?image=why-so-functional/img/oop.png&size=contain
 
 +++
 

@@ -2,7 +2,7 @@
 
 ---
 
-![Edsger W. Dijkstra](http://cs-exhibitions.uni-klu.ac.at/fileadmin/template/documents/picture/EWD_thinking_1963.jpg)
+![Edsger W. Dijkstra](can-we-live-without-this/img/dijkstra.jpg)
 
 Edsger W. Dijkstra
 
@@ -40,7 +40,7 @@ endif
 
 ---
 
-![Ole-Johan Dahl and Kristen Nygaard](https://history-computer.com/ModernComputer/Software/images/Dahl_and_Nygaard.jpg)
+![Ole-Johan Dahl and Kristen Nygaard](can-we-live-without-this/img/dahl-and-nygaard.jpg)
 
 Ole-Johan Dahl and Kristen Nygaard
 
@@ -111,7 +111,7 @@ class Main
 
 ---
 
-![Alonzo Church](https://www.biografiasyvidas.com/biografia/c/fotos/church_alonzo.jpg)
+![Alonzo Church](can-we-live-without-this/img/church.jpg)
 
 Alonzo Church
 
@@ -985,13 +985,13 @@ console.log(x + y);
 
 +++
 
-![Douglas Crockford](https://upload.wikimedia.org/wikipedia/commons/2/24/Douglas_Crockford%2C_February_2013.jpg)
+![Douglas Crockford](can-we-live-without-this/img/crockford.jpg)
 
 Douglas Crockford
 
 <!-- .element: class="fragment" -->
 
-+++?image=https://i.redd.it/h7nt4keyd7oy.jpg&size=contain
++++?image=can-we-live-without-this/img/javascript-the-good-parts.jpg&size=contain
 
 +++
 
