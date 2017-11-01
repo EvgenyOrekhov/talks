@@ -2,7 +2,7 @@
 
 ---
 
-![Edsger W. Dijkstra](can-we-live-without-this/img/dijkstra.jpg)
+![Edsger W. Dijkstra](https://github.com/EvgenyOrekhov/talks/raw/master/can-we-live-without-this/img/dijkstra.jpg)
 
 Edsger W. Dijkstra
 
@@ -40,7 +40,7 @@ endif
 
 ---
 
-![Ole-Johan Dahl and Kristen Nygaard](can-we-live-without-this/img/dahl-and-nygaard.jpg)
+![Ole-Johan Dahl and Kristen Nygaard](https://github.com/EvgenyOrekhov/talks/raw/master/can-we-live-without-this/img/dahl-and-nygaard.jpg)
 
 Ole-Johan Dahl and Kristen Nygaard
 
@@ -111,7 +111,7 @@ class Main
 
 ---
 
-![Alonzo Church](can-we-live-without-this/img/church.jpg)
+![Alonzo Church](https://github.com/EvgenyOrekhov/talks/raw/master/can-we-live-without-this/img/church.jpg)
 
 Alonzo Church
 
@@ -985,7 +985,7 @@ console.log(x + y);
 
 +++
 
-![Douglas Crockford](can-we-live-without-this/img/crockford.jpg)
+![Douglas Crockford](https://github.com/EvgenyOrekhov/talks/raw/master/can-we-live-without-this/img/crockford.jpg)
 
 Douglas Crockford
 
