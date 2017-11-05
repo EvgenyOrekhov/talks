@@ -941,6 +941,7 @@ describe("my suite", () => {
 $.ajax("http://example.com").done(console.log);
 ```
 
+@[-](?)
 @[-](TypeError: Illegal invocation)
 
 +++
