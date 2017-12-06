@@ -683,11 +683,11 @@ object.property = "const forbids reassignment, not mutation";
 function greet(name, language) {
     switch (language) {
     case "ru":
-        name = "Привет, " + name + "!";
+        name = `Привет, ${name}!`;
     case "es":
-        name = "¡Hola, " + name + "!";
+        name = `¡Hola, ${name}!`;
     default:
-        name = "Hello, " + name + "!";
+        name = `Hello, ${name}!`;
     }
     console.log(name);
 }
@@ -704,13 +704,13 @@ greet("Деннис", "ru");
 function greet(name, language) {
     switch (language) {
     case "ru":
-        name = "Привет, " + name + "!";
+        name = `Привет, ${name}!`;
         break;
     case "es":
-        name = "¡Hola, " + name + "!";
+        name = `¡Hola, ${name}!`;
         break;
     default:
-        name = "Hello, " + name + "!";
+        name = `Hello, ${name}!`;
     }
     console.log(name);
 }
@@ -723,32 +723,31 @@ greet("Деннис", "ru");
 ```js
 switch (language) {
 case "ru":
-    name = "Привет, " + name + "!";
+    name = `Привет, ${name}!`;
     break;
 case "es":
-    name = "¡Hola, " + name + "!";
+    name = `¡Hola, ${name}!`;
     break;
 default:
-    name = "Hello, " + name + "!";
+    name = `Hello, ${name}!`;
 }
 ```
 
 +++
 
 ```js
-const cases = {
-    "ru": function () {
-        name = "Привет, " + name + "!";
-    },
-    "es": function () {
-        name = "¡Hola, " + name + "!";
-    },
-    default: function () {
-        name = "Hello, " + name + "!";
-    }
+const cases = Object.create(null);
+cases.ru = function () {
+    name = `Привет, ${name}!`;
 };
-const changeResult = cases[language] || cases.default;
-changeResult();
+cases.es = function () {
+    name = `¡Hola, ${name}!`;
+};
+cases.default = function () {
+    name = `Hello, ${name}!`;
+};
+const runCase = cases[language] || cases.default;
+runCase();
 ```
 
 +++
