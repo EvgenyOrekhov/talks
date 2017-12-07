@@ -752,6 +752,54 @@ runCase();
 
 +++
 
+```js
+function isNaN(value) {
+    switch (value) {
+    case NaN:
+        return true;
+    default:
+        return false;
+    }
+}
+
+isNaN(NaN);
+```
+
+@[-](?)
+@[-](false)
+
++++
+
+```js
+function switchCase(
+    value,
+    cases,
+    defaultCase = () => undefined
+) {
+    const map = new Map(cases);
+    const runCase = map.get(value) || defaultCase;
+    return runCase();
+}
+```
+
+```js
+function isNaN(value) {
+    switchCase(
+        value,
+        [
+            [NaN, () => true]
+        ],
+        () => false
+    );
+}
+
+isNaN(NaN);
+```
+
+<!-- .element: class="fragment" -->
+
++++
+
 ## ~~switch~~
 
 ## ~~case~~
