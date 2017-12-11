@@ -729,7 +729,7 @@ function greet(name, language) {
     console.log(name);
 }
 
-greet("Деннис", "ru");
+greet("Деннис", "ru"); // Привет, Деннис!
 ```
 
 +++
