@@ -350,6 +350,19 @@ object.property = undefined;
 +++
 
 ```js
+const greeting = "Hello, World!";
+
+greeting.length; // 13
+
+"length" in greeting;
+```
+
+@[-](?)
+@[-](TypeError: Cannot use 'in' operator to search for 'length' in Hello, World!)
+
++++
+
+```js
 if ("property" in object) {
 
 }
