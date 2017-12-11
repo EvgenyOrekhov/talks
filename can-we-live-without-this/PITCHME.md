@@ -356,7 +356,7 @@ if ("property" in object) {
 ```
 
 ```js
-if (object.property) {
+if (object.property !== undefined) {
 
 }
 ```
