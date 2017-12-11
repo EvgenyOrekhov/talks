@@ -798,7 +798,7 @@ function switchCase(
 
 ```js
 function isNaN(value) {
-    switchCase(
+    return switchCase(
         value,
         [
             [NaN, () => true]
@@ -807,7 +807,7 @@ function isNaN(value) {
     );
 }
 
-isNaN(NaN);
+isNaN(NaN); // true
 ```
 
 <!-- .element: class="fragment" -->
