@@ -350,13 +350,26 @@ object.property = undefined;
 +++
 
 ```js
+const greeting = "Hello, World!";
+
+greeting.length; // 13
+
+"length" in greeting;
+```
+
+@[-](?)
+@[-](TypeError: Cannot use 'in' operator to search for 'length' in Hello, World!)
+
++++
+
+```js
 if ("property" in object) {
 
 }
 ```
 
 ```js
-if (object.property) {
+if (object.property !== undefined) {
 
 }
 ```
@@ -489,6 +502,7 @@ while (count < 10) {
 .forEach(callback)
 .map(callback)
 .reduce(callback)
+.reduceRight(callback)
 .filter(predicate)
 .some(predicate)
 .every(predicate)
