@@ -502,6 +502,7 @@ while (count < 10) {
 .forEach(callback)
 .map(callback)
 .reduce(callback)
+.reduceRight(callback)
 .filter(predicate)
 .some(predicate)
 .every(predicate)
