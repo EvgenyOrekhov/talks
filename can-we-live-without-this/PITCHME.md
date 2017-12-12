@@ -884,7 +884,7 @@ true instanceof Boolean; // false
 function Rabbit(name) {
     this.name = name;
     this.jump = function () {
-        cosnole.log(`${this.name} jumps!`);
+        console.log(`${this.name} jumps!`);
     };
 };
 const lada = {brand: "lada"};
@@ -907,7 +907,7 @@ if (kalina instanceof Rabbit) { // true
 function Rabbit(name) {
     this.name = name;
     this.jump = function () {
-        cosnole.log(`${this.name} jumps!`);
+        console.log(`${this.name} jumps!`);
     };
 };
 const lada = {brand: "lada"};
@@ -924,7 +924,7 @@ if (kalina instanceof Rabbit) { // true
 function Rabbit(name) {
     this.name = name;
     this.jump = function () {
-        cosnole.log(`${this.name} jumps!`);
+        console.log(`${this.name} jumps!`);
     };
 };
 const lada = {brand: "lada"};
