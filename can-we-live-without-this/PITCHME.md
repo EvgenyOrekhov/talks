@@ -145,6 +145,8 @@ uppercasedGreeting = "HELLO, WORLD!"
 
 ---
 
+## JavaScript keywords
+
 with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this
 throw try catch new typeof if import export const return function
@@ -174,6 +176,22 @@ Function.prototype.apply()
 +++
 
 ```js
+ooo.eee.oo.ah_ah.ting.tang.walla.walla.bing = true;
+ooo.eee.oo.ah_ah.ting.tang.walla.walla.bang = true;
+```
+
+```js
+with (ooo.eee.oo.ah_ah.ting.tang.walla.walla) {
+    bing = true;
+    bang = true;
+}
+```
+
+<!-- .element: class="fragment" -->
+
++++
+
+```js
 with (object) {
     a = b;
 }
@@ -187,6 +205,23 @@ with (object) {
 ```
 
 @[-](?)
+
++++
+
+```js
+with (ooo.eee.oo.ah_ah.ting.tang.walla.walla) {
+    bing = true;
+    bang = true;
+}
+```
+
+```js
+var walla = ooo.eee.oo.ah_ah.ting.tang.walla.walla;
+walla.bing = true;
+walla.bang = true;
+```
+
+<!-- .element: class="fragment" -->
 
 +++
 
@@ -841,23 +876,6 @@ typeof 42 === "number"; // true
 ```js
 typeof true === "boolean"; // true
 true instanceof Boolean; // false
-```
-
-+++
-
-```js
-function Rabbit(name) {
-    this.name = name;
-    this.jump = function () {
-        cosnole.log(`${this.name} jumps!`);
-    };
-};
-const lada = {brand: "lada"};
-Rabbit.prototype = lada;
-const kalina = Object.create(lada);
-if (kalina instanceof Rabbit) {
-    kalina.jump();
-}
 ```
 
 +++
