@@ -256,10 +256,10 @@ function makeGenerator(...) {
 
 ```js
 function makeGenerator(array) {
-    let i = 0;
+    var i = 0;
     return function generate() {
         if (i < array.length) {
-            const value = array[i];
+            var value = array[i];
             i += 1;
             return value;
         }
@@ -268,7 +268,7 @@ function makeGenerator(array) {
 ```
 
 ```js
-const generate = makeGenerator([1, 2, 3]);
+var generate = makeGenerator([1, 2, 3]);
 
 generate(); // 1
 generate(); // 2
@@ -385,7 +385,7 @@ object.property = undefined;
 +++
 
 ```js
-const greeting = "Hello, World!";
+var greeting = "Hello, World!";
 
 greeting.length; // 13
 
@@ -497,7 +497,7 @@ Object.keys(object).forEach(function (property) {
 +++
 
 ```js
-let count = 0;
+var count = 0;
 while (count < 10) {
     count += 1;
     if (count % 2 !== 0) {
@@ -508,7 +508,7 @@ while (count < 10) {
 ```
 
 ```js
-let count = 0;
+var count = 0;
 while (count < 10) {
     count += 1;
     if (count % 2 === 0) {
@@ -548,7 +548,7 @@ while (count < 10) {
 +++
 
 ```js
-let count = 1;
+var count = 1;
 while (count <= 10) {
     if (count % 2 === 0) {
         console.log(count);
@@ -600,7 +600,7 @@ function quicksort([pivot, ...rest]) {
 
 ```js
 function isNumber(arg) {
-    let result;
+    var result;
     if (typeof arg === "number") {
         result = true;
     } else {
@@ -612,7 +612,7 @@ function isNumber(arg) {
 
 ```js
 function isNumber(arg) {
-    let result = false;
+    var result = false;
     if (typeof arg === "number") {
         result = true;
     }
