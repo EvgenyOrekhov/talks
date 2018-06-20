@@ -1,5 +1,6 @@
 {
     "theme": "night",
     "highlight": "tomorrow-night-bright",
-    "transition": "none"
+    "transition": "none",
+    "code-reveal": true
 }
