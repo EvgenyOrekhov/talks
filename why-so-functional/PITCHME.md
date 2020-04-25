@@ -1305,9 +1305,11 @@ echo $app($_REQUEST);
 
 ---
 
+## [Phunctional](https://github.com/Lambdish/phunctional) (PHP)
+
 ## [Pramda](https://github.com/kapolos/pramda) (PHP)
 
-## [Ramda](http://ramdajs.com) (JS)
+## [Ramda](https://ramdajs.com) (JS)
 
 <br>
 

@@ -69,7 +69,7 @@ int main (void) {
     int status;
     tCommClass commHttp;
     httpInit (&commHttp);
-    status = (commHttp.open)(&commHttp, "http://example.com");
+    status = (commHttp.open)(&commHttp, "https://example.com");
     return 0;
 }
 ```
@@ -96,7 +96,7 @@ class Main
 {
     public function __construct(Openable $openable)
     {
-        $status = $openable->open("http://example.com");
+        $status = $openable->open("https://example.com");
     }
 }
 ```
@@ -1007,7 +1007,7 @@ describe("my suite", () => {
 +++
 
 ```js
-$.ajax("http://example.com").done(console.log);
+$.ajax("https://example.com").done(console.log);
 ```
 
 @[-](?)
@@ -1016,7 +1016,7 @@ $.ajax("http://example.com").done(console.log);
 +++
 
 ```js
-$.ajax("http://example.com").done(console.log.bind(console));
+$.ajax("https://example.com").done(console.log.bind(console));
 ```
 
 +++
@@ -1268,9 +1268,10 @@ function makeObject(options) {
         anotherObject.anotherMethod();
     }
 
-    return Object.assign(anotherObject, {
+    return {
+        ...anotherObject,
         method
-    });
+    };
 }
 ```
 
@@ -1286,9 +1287,11 @@ function makeObject(options) {
         someOtherObject.someOtherMethod();
     }
 
-    return Object.assign(anotherObject, someOtherObject, {
+    return {
+        ...anotherObject,
+        ...someOtherObject,
         method
-    });
+    };
 }
 ```
 
@@ -1321,9 +1324,10 @@ function makeObject(
         anotherObject.anotherMethod();
     }
 
-    return Object.assign(anotherObject, {
+    return {
+        ...anotherObject,
         method
-    });
+    };
 }
 ```
 
@@ -1445,6 +1449,6 @@ throw try catch new typeof if import export const return function
 
 ---
 
-## [JSLint](http://jslint.com)
+## [JSLint](https://jslint.com)
 
 ---?include=repo-link.md
