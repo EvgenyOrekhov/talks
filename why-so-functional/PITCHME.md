@@ -938,22 +938,23 @@ $filter = $curry(function ($f, $array) {
 });
 ```
 
+@div[fragment]
 ```php
 $map = $curry(function ($f, $array) {
     return array_map($f, $array);
 });
 ```
+@divend
 
-<!-- .element: class="fragment" -->
-
+@div[fragment]
 ```php
 $flat = function (array $arrays) {
     return array_merge(...$arrays);
 };
 ```
+@divend
 
-<!-- .element: class="fragment" -->
-
+@div[fragment]
 ```php
 $average = function ($array) {
     return $array
@@ -961,8 +962,7 @@ $average = function ($array) {
         : 0;
 };
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
