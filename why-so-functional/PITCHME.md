@@ -1220,7 +1220,7 @@ $result = $average($bashExperience);
 +++
 
 ```php
-$averageBashExpForProgrammers = $pipe([
+$averageBashExperienceForProgrammers = $pipe([
     $filter($propEq('profession', 'programmer')),
     $flatMap($prop('skills')),
     $filter($propEq('name', 'bash')),
@@ -1234,7 +1234,7 @@ $averageBashExpForProgrammers = $pipe([
 +++
 
 ```php
-$averageBashExpForProgrammers = $pipe([
+$averageBashExperienceForProgrammers = $pipe([
     $filter($propEq('profession', 'programmer')),
     $flatMap($prop('skills')),
     $filter($propEq('name', 'bash')),
@@ -1242,7 +1242,7 @@ $averageBashExpForProgrammers = $pipe([
     $average,
 ]);
 
-echo $averageBashExpForProgrammers($employees); // 3
+echo $averageBashExperienceForProgrammers($employees); // 3
 ```
 
 +++
@@ -1268,7 +1268,7 @@ $result = $count ? $sum / $count : 0;
 +++
 
 ```php
-$averageBashExpForProgrammers = $pipe([
+$averageBashExperienceForProgrammers = $pipe([
     $filter($propEq('profession', 'programmer')),
     $flatMap($prop('skills')),
     $filter($propEq('name', 'bash')),

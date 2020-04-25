@@ -86,7 +86,7 @@ $flatMap = function ($f) use ($pipe, $map, $flat) {
     return $pipe([$map($f), $flat]);
 };
 
-$averageBashExpForProgrammers = $pipe([
+$averageBashExperienceForProgrammers = $pipe([
     $filter($propEq('profession', 'programmer')),
     $flatMap($prop('skills')),
     $filter($propEq('name', 'bash')),
@@ -94,4 +94,4 @@ $averageBashExpForProgrammers = $pipe([
     $average,
 ]);
 
-echo $averageBashExpForProgrammers($employees); // 3
+echo $averageBashExperienceForProgrammers($employees); // 3
