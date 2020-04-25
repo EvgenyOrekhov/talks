@@ -1268,9 +1268,10 @@ function makeObject(options) {
         anotherObject.anotherMethod();
     }
 
-    return Object.assign(anotherObject, {
+    return {
+        ...anotherObject,
         method
-    });
+    };
 }
 ```
 
@@ -1286,9 +1287,11 @@ function makeObject(options) {
         someOtherObject.someOtherMethod();
     }
 
-    return Object.assign(anotherObject, someOtherObject, {
+    return {
+        ...anotherObject,
+        ...someOtherObject,
         method
-    });
+    };
 }
 ```
 
@@ -1321,9 +1324,10 @@ function makeObject(
         anotherObject.anotherMethod();
     }
 
-    return Object.assign(anotherObject, {
+    return {
+        ...anotherObject,
         method
-    });
+    };
 }
 ```
 
