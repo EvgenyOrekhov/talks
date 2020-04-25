@@ -1309,7 +1309,7 @@ echo $app($_REQUEST);
 
 ## [Pramda](https://github.com/kapolos/pramda) (PHP)
 
-## [Ramda](http://ramdajs.com) (JS)
+## [Ramda](https://ramdajs.com) (JS)
 
 <br>
 
