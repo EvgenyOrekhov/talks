@@ -4,9 +4,7 @@
 
 ![Edsger W. Dijkstra](https://github.com/EvgenyOrekhov/talks/raw/master/can-we-live-without-this/img/dijkstra.jpg)
 
-Edsger W. Dijkstra
-
-<!-- .element: class="fragment" -->
+@css[fragment](Edsger W. Dijkstra)
 
 +++
 
@@ -24,6 +22,7 @@ Edsger W. Dijkstra
 400 continue
 ```
 
+@div[fragment]
 ```fortran
 if ( x.le.5) then
    y=0
@@ -31,8 +30,7 @@ else
    y=(x=5.)**2
 endif
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -42,9 +40,7 @@ endif
 
 ![Ole-Johan Dahl and Kristen Nygaard](https://github.com/EvgenyOrekhov/talks/raw/master/can-we-live-without-this/img/dahl-and-nygaard.jpg)
 
-Ole-Johan Dahl and Kristen Nygaard
-
-<!-- .element: class="fragment" -->
+@css[fragment](Ole-Johan Dahl and Kristen Nygaard)
 
 +++
 
@@ -113,9 +109,7 @@ class Main
 
 ![Alonzo Church](https://github.com/EvgenyOrekhov/talks/raw/master/can-we-live-without-this/img/church.jpg)
 
-Alonzo Church
-
-<!-- .element: class="fragment" -->
+@css[fragment](Alonzo Church)
 
 +++
 
@@ -151,9 +145,7 @@ with void yield async await class extends super static delete in finally
 continue for while do else var let switch case break default instanceof this
 throw try catch new typeof if import export const return function
 
-## 36
-
-<!-- .element: class="fragment" -->
+## @css[fragment](36)
 
 +++
 
@@ -180,14 +172,14 @@ ooo.eee.oo.ah_ah.ting.tang.walla.walla.bing = true;
 ooo.eee.oo.ah_ah.ting.tang.walla.walla.bang = true;
 ```
 
+@div[fragment]
 ```js
 with (ooo.eee.oo.ah_ah.ting.tang.walla.walla) {
     bing = true;
     bang = true;
 }
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -215,13 +207,13 @@ with (ooo.eee.oo.ah_ah.ting.tang.walla.walla) {
 }
 ```
 
+@div[fragment]
 ```js
 var walla = ooo.eee.oo.ah_ah.ting.tang.walla.walla;
 walla.bing = true;
 walla.bang = true;
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -267,6 +259,7 @@ function makeGenerator(array) {
 }
 ```
 
+@div[fragment]
 ```js
 var generate = makeGenerator([1, 2, 3]);
 
@@ -275,8 +268,7 @@ generate(); // 2
 generate(); // 3
 generate(); // undefined
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -368,11 +360,11 @@ var rect = new Rectangle();
 delete object.property;
 ```
 
+@div[fragment]
 ```js
 object.property = undefined;
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -403,13 +395,13 @@ if ("property" in object) {
 }
 ```
 
+@div[fragment]
 ```js
 if (object.property !== undefined) {
 
 }
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -419,13 +411,13 @@ for (var property in object) {
 }
 ```
 
+@div[fragment]
 ```js
 Object.keys(object).forEach(function (property) {
 
 });
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -507,6 +499,7 @@ while (count < 10) {
 }
 ```
 
+@div[fragment]
 ```js
 var count = 0;
 while (count < 10) {
@@ -516,8 +509,7 @@ while (count < 10) {
     }
 }
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -557,6 +549,7 @@ while (count <= 10) {
 }
 ```
 
+@div[fragment]
 ```js
 (function logEvenUntil10(count = 1) {
     if (count <= 10) {
@@ -567,8 +560,7 @@ while (count <= 10) {
     }
 }());
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -610,6 +602,7 @@ function isNumber(arg) {
 }
 ```
 
+@div[fragment]
 ```js
 function isNumber(arg) {
     var result = false;
@@ -619,8 +612,7 @@ function isNumber(arg) {
     return result;
 }
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -640,10 +632,9 @@ for (var i = 1; i <= 10; i++) {
 }
 ```
 
-11 11 11 11 11 11 11 11 11 11
+@css[fragment](11 11 11 11 11 11 11 11 11 11)
 
-<!-- .element: class="fragment" -->
-
+@div[fragment]
 ```js
 for (let i = 1; i <= 10; i++) {
     setTimeout(function () {
@@ -651,12 +642,9 @@ for (let i = 1; i <= 10; i++) {
     }, 100);
 }
 ```
+@divend
 
-<!-- .element: class="fragment" -->
-
-1 2 3 4 5 6 7 8 9 10
-
-<!-- .element: class="fragment" -->
+@css[fragment](1 2 3 4 5 6 7 8 9 10)
 
 +++
 
@@ -704,13 +692,13 @@ function greet(name) {
 }
 ```
 
+@div[fragment]
 ```js
 const object = {};
 
 object.property = "const forbids reassignment, not mutation";
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -831,6 +819,7 @@ function switchCase(
 }
 ```
 
+@div[fragment]
 ```js
 function isNaN(value) {
     return switchCase(
@@ -844,8 +833,7 @@ function isNaN(value) {
 
 isNaN(NaN); // true
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -966,6 +954,7 @@ Shape.prototype.move = function (x, y) {
 };
 ```
 
+@div[fragment]
 ```js
 function Rectangle() {
   Shape.call(this);
@@ -976,8 +965,7 @@ Rectangle.prototype.constructor = Rectangle;
 
 const rect = new Rectangle();
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -1067,9 +1055,7 @@ console.log(x + y);
 
 ![Douglas Crockford](https://github.com/EvgenyOrekhov/talks/raw/master/can-we-live-without-this/img/crockford.jpg)
 
-Douglas Crockford
-
-<!-- .element: class="fragment" -->
+@css[fragment](Douglas Crockford)
 
 +++?image=can-we-live-without-this/img/javascript-the-good-parts.jpg&size=contain
 
@@ -1107,6 +1093,7 @@ function makeCounter() {
 }
 ```
 
+@div[fragment]
 ```js
 const counter = makeCounter();
 
@@ -1114,8 +1101,7 @@ counter(); // 1
 counter(); // 2
 counter(); // 3
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -1202,13 +1188,13 @@ function makeObject(options) {
 }
 ```
 
+@div[fragment]
 ```js
 const object = makeObject({abc: 123});
 
 object.methodB();
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -1339,28 +1325,27 @@ function makeObject(
 }
 ```
 
+@div[fragment]
 ```js
 const object = makeObject({abc: 123});
 ```
+@divend
 
-<!-- .element: class="fragment" -->
-
+@div[fragment]
 ```js
 const someOtherObject = makeSomeOtherObject();
 
 const object = makeObject({abc: 123}, someOtherObject);
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
 ## ~~this~~
 
-## ~~new~~
+## @css[fragment](~~new~~)
 
-<!-- .element: class="fragment" -->
-
+@div[fragment]
 ```js
 Object.prototype.__proto__
 Object.prototype.constructor
@@ -1372,8 +1357,7 @@ Function.prototype.bind()
 Function.prototype.call()
 Function.prototype.apply()
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 ---
 
@@ -1394,6 +1378,7 @@ function readFile(name) {
 }
 ```
 
+@div[fragment]
 ```js
 try {
     const data = readFile("/etc/passwd");
@@ -1403,8 +1388,7 @@ try {
     console.error(err);
 }
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
@@ -1421,14 +1405,14 @@ function readFile(name) {
 }
 ```
 
+@div[fragment]
 ```js
 readFile("/etc/passwd")
     .then(JSON.parse)
     .then(console.log)
     .catch(console.error);
 ```
-
-<!-- .element: class="fragment" -->
+@divend
 
 +++
 
