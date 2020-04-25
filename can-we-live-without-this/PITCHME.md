@@ -125,7 +125,9 @@ greeting = "Hello, World!"
 greeting = "HELLO, WORLD!"
 ```
 
-@[-](Error: Multiple declarations of ‘greeting’)
+@snap[south fragment]
+Error: Multiple declarations of ‘greeting’
+@snapend
 
 +++
 
