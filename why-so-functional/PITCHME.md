@@ -4,9 +4,9 @@
 
 ### Imperative -> Functional
 
+@div[fragment]
 ### in PHP!
-
-<!-- .element: class="fragment" -->
+@divend
 
 ---
 
