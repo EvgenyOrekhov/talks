@@ -4,11 +4,7 @@
 
 ### Imperative -> Functional
 
-@div[fragment]
-
-### in PHP!
-
-@divend
+### @css[fragment](in PHP!)
 
 ---
 
