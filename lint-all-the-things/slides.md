@@ -5,7 +5,7 @@ layout: intro
 canvasWidth: 750
 ---
 
-# Lint all the things
+# Lint All The Things
 
 ## Using advanced ESLint rules<br />to prevent bugs and avoid bad code patterns
 

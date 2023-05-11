@@ -2,6 +2,10 @@
 
 Slides and other materials for the talks I gave about programming
 
+## 2023
+
+- [Lint All The Things](lint-all-the-things/slides.md)
+
 ## 2017
 
 - [Can We Live Without This?](https://gitpitch.com/EvgenyOrekhov/talks?p=can-we-live-without-this)
