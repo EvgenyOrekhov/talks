@@ -593,6 +593,18 @@ export function FlawlessComponent(props) {
 
 <div style="text-align: center;">✅ Good</div>
 
+<br />
+
+<v-click>
+
+<img
+  alt="Disappointed cricket fan"
+  width="300"
+  src="https://github.com/EvgenyOrekhov/talks/raw/master/lint-all-the-things/img/disappointed-cricket-fan.jpg"
+/>
+
+</v-click>
+
 ---
 
 ## [import/no-unused-modules](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unused-modules.md)
