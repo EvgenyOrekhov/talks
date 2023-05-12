@@ -73,7 +73,7 @@ function WhatIsESLint() {
 
 ```ts
 test('ESLint author', async ({ page }) => {
-  await page.goto('https://eslint.org/');
+  await page.goto('https://eslint.org/team/');
   expect(page.getByText('Nicholas C. Zakas')).toBeVisible();
 });
 ```
@@ -96,7 +96,7 @@ test('ESLint author', async ({ page }) => {
 
 ```ts
 test('ESLint author', async ({ page }) => {
-  await page.goto('https://eslint.org/');
+  await page.goto('https://eslint.org/team/');
   await expect(page.getByText('Nicholas C. Zakas')).toBeVisible();
 });
 ```
@@ -111,7 +111,7 @@ test('ESLint author', async ({ page }) => {
 
 ```ts
 await test('ESLint author', async ({ page }) => {
-  await page.goto('https://eslint.org/');
+  await page.goto('https://eslint.org/team/');
   await expect(await page.getByText('Nicholas C. Zakas')).toBeVisible();
 });
 ```
@@ -122,7 +122,7 @@ await test('ESLint author', async ({ page }) => {
 
 ```ts
 test('ESLint author', async ({ page }) => {
-  await page.goto('https://eslint.org/');
+  await page.goto('https://eslint.org/team/');
   await expect(page.getByText('Nicholas C. Zakas')).toBeVisible();
 });
 ```
@@ -166,19 +166,13 @@ try {
 
 <div style="text-align: center;">❌ Bad</div>
 
-```tsx
-<input
-  onChange={() => {
-    if (event.keyCode === 8) {
-      // ...
-    }
-  }}
-/>
+```ts
+import { BrowserTracing } from '@sentry/tracing';
 ```
 
 <v-click>
 
-> `ReferenceError: event is not defined`
+> `@sentry/tracing has been deprecated`
 
 </v-click>
 
@@ -186,51 +180,13 @@ try {
 
 <div style="text-align: center;">✅ Good</div>
 
-```tsx
-<input
-  onChange={(event) => {
-    if (event.keyCode === 8) {
-      // ...
-    }
-  }}
-/>
+```ts
+import { BrowserTracing } from '@sentry/react';
 ```
 
 ---
 
-## [no-restricted-globals](https://eslint.org/docs/latest/rules/no-restricted-globals)
-
----
-
-<div style="text-align: center;">❌ Bad</div>
-
-```tsx
-<input
-  onChange={(event) => {
-    if (event.keyCode === 8) {
-      // ...
-    }
-  }}
-/>
-```
-
----
-
-<div style="text-align: center;">✅ Good</div>
-
-```tsx
-<input
-  onChange={(event) => {
-    if (event.key === 'Backspace') {
-      // ...
-    }
-  }}
-/>
-```
-
----
-
-## [unicorn/prefer-keyboard-event-key](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-keyboard-event-key.md)
+## [eslint-plugin-deprecation](https://www.npmjs.com/package/eslint-plugin-deprecation)
 
 ---
 
@@ -275,145 +231,6 @@ foo({ bar: undefined, baz: undefined }); // OK
 ---
 
 ## [unicorn/no-object-as-default-parameter](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/no-object-as-default-parameter.md)
-
----
-
-<div style="text-align: center;">❌ Bad</div>
-
-```ts
-import bar from "bar";
-
-export function foo() {
-  // ...
-  bar();
-  // ...
-}
-```
-
-<v-click>
-
-> `Cannot find module 'bar'`
-
-</v-click>
-
----
-
-<div style="text-align: center;">✅ Good</div>
-
-<br />
-
-<div style="text-align: center;">package.json</div>
-
-```json
-"dependencies": {
-  ...
-  "bar": "^1.2.3",
-  ...
-}
-```
-
----
-
-## [import/no-extraneous-dependencies](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md)
-
----
-
-<div style="text-align: center;">❌ Bad</div>
-
-```ts
-import { BrowserTracing } from '@sentry/tracing';
-```
-
-<v-click>
-
-> `@sentry/tracing has been deprecated`
-
-</v-click>
-
----
-
-<div style="text-align: center;">✅ Good</div>
-
-```ts
-import { BrowserTracing } from '@sentry/react';
-```
-
----
-
-## [eslint-plugin-deprecation](https://www.npmjs.com/package/eslint-plugin-deprecation)
-
----
-
-<div style="text-align: center;">❌ Bad</div>
-
-```ts
-export function foo() {
-  // ...
-}
-```
-
----
-
-<div style="text-align: center;">✅ Good</div>
-
----
-
-## [import/no-unused-modules](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unused-modules.md)
-
----
-
-<div style="text-align: center;">❌ Bad</div>
-
-```tsx
-function Foo(props) {
-  return (
-    <Bar
-      items={props.items || []}
-      options={{ optionA: "A", optionB: "B" }}
-      label={<Label>{props.label}</Label>}
-      onChange={() => {
-        doSomething(props.whatever);
-      }}
-    />
-  );
-}
-```
-
-<v-click>
-
-> ``[Violation] `click` handler took 1516ms``
-
-</v-click>
-
----
-
-<div style="text-align: center;">✅ Good</div>
-
-```tsx
-const defaultItems = [];
-const options = { optionA: "A", optionB: "B" };
-
-function Foo(props) {
-  const label = useMemo(() => <Label>{props.label}</Label>, [props.label]);
-
-  const handleChange = useCallback(() => {
-    doSomething(props.whatever);
-  }, [props.whatever]);
-
-  return (
-    <Bar
-      items={props.items || defaultItems}
-      options={options}
-      label={label}
-      onChange={handleChange}
-    />
-  );
-}
-```
-
----
-
-## [eslint-plugin-react-perf](https://github.com/cvazac/eslint-plugin-react-perf)
 
 ---
 
@@ -521,6 +338,264 @@ getUserRoleName({ name: "Anders Hejlsberg", roleId: 3 });
 <br />
 
 ## [@typescript-eslint/explicit-function-return-type](https://typescript-eslint.io/rules/explicit-function-return-type/)
+
+---
+
+<div style="text-align: center;">❌ Bad</div>
+
+```tsx
+import { AnswerToTheUltimateQuestion, Label } from "components";
+import makeEverythingAwesome from "awesome";
+
+export function FlawlessComponent(props) {
+  return (
+    <AnswerToTheUltimateQuestion
+      items={props.items || []}
+      options={{ optionA: "A", optionB: "B" }}
+      label={<Label>{props.label}</Label>}
+      onChange={() => {
+        if (event.keyCode === 13) {
+          makeEverythingAwesome(props.everything);
+        }
+      }}
+    />
+  );
+}
+```
+
+<v-click>
+
+> `ReferenceError: event is not defined`
+
+</v-click>
+
+---
+
+<div style="text-align: center;">✅ Good</div>
+
+```tsx
+import { AnswerToTheUltimateQuestion, Label } from "components";
+import makeEverythingAwesome from "awesome";
+
+export function FlawlessComponent(props) {
+  return (
+    <AnswerToTheUltimateQuestion
+      items={props.items || []}
+      options={{ optionA: "A", optionB: "B" }}
+      label={<Label>{props.label}</Label>}
+      onChange={(event) => {
+        if (event.keyCode === 13) {
+          makeEverythingAwesome(props.everything);
+        }
+      }}
+    />
+  );
+}
+```
+
+---
+
+## [no-restricted-globals](https://eslint.org/docs/latest/rules/no-restricted-globals)
+
+---
+
+<div style="text-align: center;">❌ Bad</div>
+
+```tsx
+import { AnswerToTheUltimateQuestion, Label } from "components";
+import makeEverythingAwesome from "awesome";
+
+export function FlawlessComponent(props) {
+  return (
+    <AnswerToTheUltimateQuestion
+      items={props.items || []}
+      options={{ optionA: "A", optionB: "B" }}
+      label={<Label>{props.label}</Label>}
+      onChange={(event) => {
+        if (event.keyCode === 13) {
+          makeEverythingAwesome(props.everything);
+        }
+      }}
+    />
+  );
+}
+```
+
+---
+
+<div style="text-align: center;">✅ Good</div>
+
+```tsx
+import { AnswerToTheUltimateQuestion, Label } from "components";
+import makeEverythingAwesome from "awesome";
+
+export function FlawlessComponent(props) {
+  return (
+    <AnswerToTheUltimateQuestion
+      items={props.items || []}
+      options={{ optionA: "A", optionB: "B" }}
+      label={<Label>{props.label}</Label>}
+      onChange={(event) => {
+        if (event.key === 'Enter') {
+          makeEverythingAwesome(props.everything);
+        }
+      }}
+    />
+  );
+}
+```
+
+---
+
+## [unicorn/prefer-keyboard-event-key](https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/prefer-keyboard-event-key.md)
+
+---
+
+<div style="text-align: center;">❌ Bad</div>
+
+```ts
+import { AnswerToTheUltimateQuestion, Label } from "components";
+import makeEverythingAwesome from "awesome";
+
+export function FlawlessComponent(props) {
+  return (
+    <AnswerToTheUltimateQuestion
+      items={props.items || []}
+      options={{ optionA: "A", optionB: "B" }}
+      label={<Label>{props.label}</Label>}
+      onChange={(event) => {
+        if (event.key === 'Enter') {
+          makeEverythingAwesome(props.everything);
+        }
+      }}
+    />
+  );
+}
+```
+
+<v-click>
+
+> `Cannot find module 'awesome'`
+
+</v-click>
+
+---
+
+<div style="text-align: center;">✅ Good</div>
+
+<br />
+
+<div style="text-align: center;">package.json</div>
+
+```json
+"dependencies": {
+  ...
+  "awesome": "^1.2.3",
+  ...
+}
+```
+
+---
+
+## [import/no-extraneous-dependencies](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-extraneous-dependencies.md)
+
+---
+
+<div style="text-align: center;">❌ Bad</div>
+
+```tsx
+import { AnswerToTheUltimateQuestion, Label } from "components";
+import makeEverythingAwesome from "awesome";
+
+export function FlawlessComponent(props) {
+  return (
+    <AnswerToTheUltimateQuestion
+      items={props.items || []}
+      options={{ optionA: "A", optionB: "B" }}
+      label={<Label>{props.label}</Label>}
+      onChange={(event) => {
+        if (event.key === 'Enter') {
+          makeEverythingAwesome(props.everything);
+        }
+      }}
+    />
+  );
+}
+```
+
+<v-click>
+
+> ``[Violation] `click` handler took 1516ms``
+
+</v-click>
+
+---
+
+<div style="text-align: center;">✅ Good</div>
+
+```tsx
+const defaultItems = [];
+const options = { optionA: "A", optionB: "B" };
+
+export function FlawlessComponent(props) {
+  const label = useMemo(() => <Label>{props.label}</Label>, [props.label]);
+
+  const handleChange = useCallback((event) => {
+    if (event.key === 'Enter') {
+      makeEverythingAwesome(props.everything);
+    }
+  }, [props.everything]);
+
+  return (
+    <AnswerToTheUltimateQuestion
+      items={props.items || defaultItems}
+      options={options}
+      label={label}
+      onChange={handleChange}
+    />
+  );
+}
+```
+
+---
+
+## [eslint-plugin-react-perf](https://github.com/cvazac/eslint-plugin-react-perf)
+
+---
+
+<div style="text-align: center;">❌ Bad</div>
+
+```ts
+const defaultItems = [];
+const options = { optionA: "A", optionB: "B" };
+
+export function FlawlessComponent(props) {
+  const label = useMemo(() => <Label>{props.label}</Label>, [props.label]);
+
+  const handleChange = useCallback((event) => {
+    if (event.key === 'Enter') {
+      makeEverythingAwesome(props.everything);
+    }
+  }, [props.everything]);
+
+  return (
+    <AnswerToTheUltimateQuestion
+      items={props.items || defaultItems}
+      options={options}
+      label={label}
+      onChange={handleChange}
+    />
+  );
+}
+```
+
+---
+
+<div style="text-align: center;">✅ Good</div>
+
+---
+
+## [import/no-unused-modules](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unused-modules.md)
 
 ---
 
